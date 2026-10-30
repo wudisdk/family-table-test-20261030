@@ -1,6 +1,4 @@
-// Public generic recipe reference data; no personal health records.
-// Nutrients are per 100 g edible portion (mL for named liquids); null remains unknown.
-// New recipe methods are sourced family adaptations, not individualized clinical prescriptions.
+// Public generic recipe references; no personal health records.
 window.MealData = {
   "foods": {
     "rice": {
@@ -2906,6 +2904,116 @@ window.MealData = {
         "state": "去皮可食部生重"
       },
       "verified": false
+    },
+    "familyEelRaw": {
+      "id": "familyEelRaw",
+      "name": "鳝鱼去骨净肉（生）",
+      "unit": "g",
+      "group": "protein",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "verified": false,
+      "source": {
+        "id": "familyEelRaw",
+        "label": "家常菜新增食材；成分尚未匹配核验",
+        "url": "",
+        "state": "去骨净肉、生重可食部；不含头骨内脏"
+      }
+    },
+    "familyTofuDry": {
+      "id": "familyTofuDry",
+      "name": "豆干／香干（包装原态，品牌待填）",
+      "unit": "g",
+      "group": "protein",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "verified": false,
+      "source": {
+        "id": "familyTofuDry",
+        "label": "家常菜新增食材；按实际品牌标签核验后填值",
+        "url": "",
+        "state": "商品原态可食重、未再次烹调；含盐量和是否即食以包装为准"
+      }
+    },
+    "familyAmaranthRaw": {
+      "id": "familyAmaranthRaw",
+      "name": "米苋／苋菜嫩茎叶（生）",
+      "unit": "g",
+      "group": "veg",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "verified": false,
+      "source": {
+        "id": "familyAmaranthRaw",
+        "label": "家常菜新增叶菜；不是苋米或米饭，成分待核验",
+        "url": "",
+        "state": "去老根老梗后的生鲜嫩茎叶，可食部生重"
+      }
+    },
+    "familyStarchDry": {
+      "id": "familyStarchDry",
+      "name": "食用淀粉（干，品种待填）",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "verified": false,
+      "source": {
+        "id": "familyStarchDry",
+        "label": "家常菜新增调料；按实际包装核验后填值",
+        "url": "",
+        "state": "干淀粉，不含调水重量"
+      }
+    },
+    "familySesameOil": {
+      "id": "familySesameOil",
+      "name": "芝麻油／香油",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "verified": false,
+      "source": {
+        "id": "familySesameOil",
+        "label": "家常菜新增调料；成分尚未按品牌核验",
+        "url": "",
+        "state": "成品食用芝麻油，按克称量"
+      }
     }
   },
   "recipes": [
@@ -4825,7 +4933,7 @@ window.MealData = {
     {
       "id": "guide-1",
       "name": "水煮蛋",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 1,
       "cookedG": null,
       "prep": {
@@ -4886,7 +4994,8 @@ window.MealData = {
         "含蛋；作为蛋白质食物，完整早餐仍需按实际需要搭配主食和蔬果。"
       ],
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-2",
@@ -6184,7 +6293,7 @@ window.MealData = {
     {
       "id": "guide-16",
       "name": "无糖豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 2,
       "cookedG": null,
       "prep": {
@@ -6256,7 +6365,8 @@ window.MealData = {
       "batchLabel": "整批均分2参考杯，实际熟重待称",
       "nutritionNote": "过滤法会丢弃豆渣，干豆营养不能全部计入饮用豆浆；新增干豆营养保持null，不提供伪精确热量。",
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-17",
@@ -6844,7 +6954,7 @@ window.MealData = {
     {
       "id": "guide-24",
       "name": "水波蛋",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 1,
       "cookedG": null,
       "prep": {
@@ -6900,7 +7010,8 @@ window.MealData = {
         "含蛋。时间受蛋大小和水温影响，以蛋白、蛋黄均凝固为准。"
       ],
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-025",
@@ -9496,7 +9607,7 @@ window.MealData = {
     {
       "id": "guide-54",
       "name": "豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 3,
       "cookedG": null,
       "prep": {
@@ -9568,7 +9679,8 @@ window.MealData = {
       "batchLabel": "整批均分3参考杯，实际熟重待称",
       "nutritionNote": "过滤法会丢弃豆渣，干豆营养不能全部计入饮用豆浆；新增干豆营养保持null，不提供伪精确热量。",
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-055",
@@ -11192,7 +11304,7 @@ window.MealData = {
     {
       "id": "guide-73",
       "name": "牛奶",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 1,
       "cookedG": null,
       "prep": {
@@ -11242,7 +11354,8 @@ window.MealData = {
         "含乳；全脂或低脂的选择需结合年龄、膳食与医生意见，不统一强制全家脱脂。"
       ],
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-074",
@@ -13454,7 +13567,7 @@ window.MealData = {
     {
       "id": "guide-98",
       "name": "蒸鸡蛋羹",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 1,
       "cookedG": null,
       "prep": {
@@ -13530,7 +13643,8 @@ window.MealData = {
       ],
       "safetyNote": "任何蛋制品都以完全凝固、无流动蛋液及必要时测中心温度为准；不采用流心做法。",
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-099",
@@ -14505,7 +14619,7 @@ window.MealData = {
     {
       "id": "guide-109",
       "name": "无糖黑豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "portions": 3,
       "cookedG": null,
       "prep": {
@@ -14576,7 +14690,8 @@ window.MealData = {
       "batchLabel": "整批均分3参考杯，实际熟重待称",
       "nutritionNote": "过滤法会丢弃豆渣，干豆营养不能全部计入饮用豆浆；新增干豆营养保持null，不提供伪精确热量。",
       "guideVersion": "novice-1",
-      "hasDetailedRecipe": false
+      "hasDetailedRecipe": false,
+      "originalCategory": "breakfast"
     },
     {
       "id": "guide-110",
@@ -15380,6 +15495,434 @@ window.MealData = {
       "hasDetailedRecipe": false,
       "guideVersion": "novice-1",
       "uricAcidNote": "尿酸关注者不默认安排此海鲜或肉汤选项，按个人尿酸与已有方案选菜；不喝浓缩肉汤来补营养。"
+    },
+    {
+      "id": "family-eel",
+      "name": "响油鳝丝",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "familyEelRaw",
+          "g": 250
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 12
+        },
+        {
+          "foodId": "gingerRaw",
+          "g": 5
+        },
+        {
+          "foodId": "scallionRaw",
+          "g": 5
+        },
+        {
+          "foodId": "oil",
+          "g": 10
+        },
+        {
+          "foodId": "familySesameOil",
+          "g": 3
+        },
+        {
+          "foodId": "soySauce",
+          "g": 8
+        },
+        {
+          "foodId": "sugar",
+          "g": 2
+        },
+        {
+          "foodId": "familyStarchDry",
+          "g": 3
+        },
+        {
+          "foodId": "water",
+          "g": 70
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 20,
+      "totalMin": 25,
+      "steps": [
+        "买可靠来源的去骨生鳝鱼净肉，请摊主处理；回家检查残骨，切成约4厘米段。先处理葱姜蒜，再用另套刀板处理生鱼，洗手、清洁刀板。",
+        "蒜剁末，姜切细末，葱切碎；擦干表面水分。称好全部油：炒菜用植物油10克，最后响油用芝麻油3克，不凭手感再补油。",
+        "小碗把酱油8克、糖2克和水50克拌匀；另用淀粉3克加水20克调开。此参考版不加料酒、鲜汤和额外盐。",
+        "锅中加10克植物油，中火加热至流动顺畅、尚未冒烟，下姜和一半蒜末炒约15秒；放入鳝丝，中大火翻炒约1分钟。",
+        "倒入酱汁煮开，转中小火盖盖烧约4—6分钟，期间翻一次；时间随鳝丝粗细调整，以最厚处中心至少75℃并保持30秒为准，不能只凭外表变色认定熟透。",
+        "确认全熟后开盖转中火，水淀粉重新搅匀，分次倒入，翻动煮开约30—60秒至薄薄挂汁。盛入耐热深盘，把葱和余下蒜末放中央。",
+        "用小锅小火温热3克芝麻油至流动并有香气，立即离火，贴近盘面缓缓浇在葱蒜上，拌匀食用；不要烧至冒烟，不追求大声爆响，操作时让孩子远离灶台。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "爷爷常做",
+        "家常菜",
+        "新手步骤"
+      ],
+      "estimated": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "protein",
+      "guideVersion": "family-1",
+      "noviceTips": [
+        "起始食材是去骨生鳝肉；若买到商家汆熟划丝，不能把熟重冒作生重，仍需回锅彻底加热。",
+        "厨房计时只是参考；鱼肉熟透优先于追求滑嫩，分给孩子和老人前再次检查骨刺并剪短。",
+        "这是保留少量响油风味的家庭参考版，成品不会与餐馆重油鳝糊完全相同。"
+      ],
+      "healthNotes": [
+        "原作者500克净鳝丝使用植物油50克加麻油20克；本版改为250克生净肉、总加油13克，并单独计量响油，不贴低脂或治疗性健康标签。",
+        "酱油已经带盐，不再默认叠加食盐；当天其他菜、汤、外食的油盐也要合计。",
+        "两份只表示参考菜量；哺乳期、5岁孩子和老人需按各自食量、咀嚼能力及完整餐盘分配，不能共用成人定量。"
+      ],
+      "sourceRefs": [
+        {
+          "title": "苏州味道：响油鳝糊（下厨房）",
+          "url": "https://m.xiachufang.com/recipe/1037433/",
+          "relation": "做法结构参考：炒烧鳝丝、薄芡、葱蒜响油；不采用原文药用或降血糖说法，另行减少并计量油糖盐。"
+        },
+        {
+          "title": "中国居民膳食指南（2022）核心推荐（福建省卫健委）",
+          "url": "https://wjw.fujian.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+          "relation": "鱼肉总量及少盐少油依据。"
+        },
+        {
+          "title": "香港食物安全中心：烹煮及翻热",
+          "url": "https://www.cfs.gov.hk/tc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html",
+          "relation": "中心温度75℃至少30秒及生熟判断依据；不以菜谱分钟数保证安全。"
+        },
+        {
+          "title": "成人高尿酸血症与痛风食养指南（2024年版），国家卫健委／广西疾控镜像",
+          "url": "https://www.gxcdc.org.cn/uploadfile/20240326/1711416875650984.pdf",
+          "relation": "限制嘌呤、因人调整及指南适用边界；没有据此编造鳝鱼专属嘌呤值。"
+        }
+      ],
+      "frequency": {
+        "label": "家庭排餐参考：每周0—1次，和其他鱼类轮换",
+        "reason": "这是一道有响油的鱼菜。每参考成人份约125克生净鳝肉应计入当周鱼类总量；普通成人可对照指南每周吃鱼2次或300—500克，并把其他鱼、虾等水产另行汇总检查，不能给每道鱼菜各排1—2次再无限相加。该范围不是高尿酸、哺乳期或老人的治疗处方。",
+        "weeklyRange": [
+          0,
+          1
+        ],
+        "scope": "家庭排餐参考，并非官方按单菜规定的次数",
+        "budgetGroup": "fish"
+      },
+      "nutritionComment": [
+        "鳝肉作为动物性食物可提供蛋白质；本库未核验具体鳝肉成分，不能显示本菜精确热量、脂肪、钠或嘌呤。",
+        "加油量13克是整盘配方投料，不等于实测吸油或每人实吃油量；需要结合分餐与盘底剩余量。"
+      ],
+      "uricAcidNote": "高尿酸不等于所有鱼都禁食。此菜不作默认推荐，也不宣称鳝鱼低嘌呤；是否吃、吃多少应结合血尿酸、痛风发作状态、个体诱发史和肾功能。急性发作或有肾功能异常时按专业人员方案调整，不把上述周频次当通用处方。",
+      "basisNote": "应用参考配方，未获爷爷实际用油盐，不冒称实测",
+      "familiarity": "familiar"
+    },
+    {
+      "id": "family-celery-tofu-beef",
+      "name": "芹菜豆干牛肉丝",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "beef",
+          "g": 160
+        },
+        {
+          "foodId": "familyTofuDry",
+          "g": 100
+        },
+        {
+          "foodId": "celery",
+          "g": 250
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 5
+        },
+        {
+          "foodId": "gingerRaw",
+          "g": 3
+        },
+        {
+          "foodId": "oil",
+          "g": 10
+        },
+        {
+          "foodId": "soySauce",
+          "g": 6
+        },
+        {
+          "foodId": "familyStarchDry",
+          "g": 3
+        },
+        {
+          "foodId": "water",
+          "g": 40
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 20,
+      "totalMin": 30,
+      "steps": [
+        "芹菜洗净去粗筋，切2—3厘米段，粗梗纵向剖细；豆干切约4毫米条，蒜姜切末。先备蔬菜，再用生肉专用刀板把瘦牛肉逆着纹路切约3毫米细丝。",
+        "牛肉拌酱油3克、淀粉3克和水10克，盖好冷藏腌约10分钟。另把余下3克酱油与水30克拌匀；豆干先看包装含盐情况，味咸时减掉这份酱油。",
+        "锅中水烧开，芹菜梗焯约30—60秒后捞出沥干；需要软口感时适当延长。豆干如包装要求烹调，应按说明处理，不能当作即食食物试吃。",
+        "净锅加入植物油6克，中大火加热但不冒烟，下牛肉迅速拨散炒约1—2分钟至表面变色，暂盛入专用待熟盘，随即继续后续烹调，不把这时的牛肉当熟食。",
+        "原锅加余下4克油，转中火炒香姜蒜约15秒；加入豆干炒约1分钟，再加入芹菜、调好的酱汁，翻炒约1分钟。",
+        "把牛肉连同待熟盘里的汁全部倒回锅，中大火翻炒约2—3分钟至整锅热透、牛肉完全熟透；以最厚处中心至少75℃并保持30秒为准，不够熟时加少量水继续烧。",
+        "用干净熟食筷检查芹菜已软到能轻松咬断后出锅，不再默认加盐、蚝油或鸡精。给孩子和咀嚼较弱老人夹菜时再剪短牛肉丝和芹菜。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "爷爷常做",
+        "家常菜",
+        "新手步骤"
+      ],
+      "estimated": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "protein",
+      "guideVersion": "family-1",
+      "noviceTips": [
+        "逆纹切肉是刀口横着切断肉的长纤维，别顺着纤维切成长筋。",
+        "豆干是豆制品，不是普通豆腐的同重量替身；香干与白豆干含盐差异大，要按实际品牌标签调整。",
+        "临时盛过半熟牛肉的盘不能直接用于装成品，须清洗后再用。"
+      ],
+      "healthNotes": [
+        "瘦牛肉搭豆干并增加芹菜，可以把同盘肉量控制得更清楚；豆干不等于无盐，要查看钠标签。",
+        "这份示例用酱油、不额外加盐，也不叠加蚝油；三高老人仍应合计全天油盐和其他肉类摄入。",
+        "哺乳期与孩子需要完整餐食和足够能量，此菜搭主食、其他蔬菜及全天奶类，不能当作一盘全营养餐。"
+      ],
+      "sourceRefs": [
+        {
+          "title": "面包饱饱：芹菜香干炒牛肉（下厨房）",
+          "url": "https://m.xiachufang.com/recipe/105963983/",
+          "relation": "腌牛肉、先炒肉暂盛、炒芹菜豆干再合炒的做法参考；本版切丝、计量油酱油、省略辣椒及重复调味。"
+        },
+        {
+          "title": "中国居民膳食指南（2022）核心推荐（福建省卫健委）",
+          "url": "https://wjw.fujian.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+          "relation": "畜禽总量、蔬菜、大豆制品及少盐少油依据。"
+        },
+        {
+          "title": "香港食物安全中心：烹煮及翻热",
+          "url": "https://www.cfs.gov.hk/tc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html",
+          "relation": "肉类必须彻底熟透。"
+        },
+        {
+          "title": "成人高尿酸血症与痛风食养指南（2024年版），国家卫健委／广西疾控镜像",
+          "url": "https://www.gxcdc.org.cn/uploadfile/20240326/1711416875650984.pdf",
+          "relation": "印刷第5页豆腐豆干可适量食用，第11页牛肉列较高嘌呤；强调总量及个体调整。"
+        }
+      ],
+      "frequency": {
+        "label": "家庭排餐参考：每周1—2次，计入肉类总量",
+        "reason": "每参考成人份约80克生牛肉，排1—2次即约80—160克，应与该周猪肉、鸡鸭等合计，对照普通成人畜禽肉每周300—500克的指南参考；豆干另计豆制品，不能把同盘豆干也算作畜禽肉额度。所有肉菜共用总量，不能把每道菜1—2次直接累加。",
+        "weeklyRange": [
+          1,
+          2
+        ],
+        "scope": "家庭排餐参考，并非官方按单菜规定的次数",
+        "budgetGroup": "meat"
+      },
+      "nutritionComment": [
+        "牛肉与豆干共同提供蛋白质，芹菜贡献蔬菜份量；不把芹菜宣传为降压药或把牛肉宣传为治疗贫血。",
+        "豆干的蛋白质、钙与钠随工艺品牌变化，尚未核验，整菜营养只可作定性说明，不能称精确。"
+      ],
+      "uricAcidNote": "2024食养指南允许豆腐豆干适量食用，不能因高尿酸就自动删去全部豆制品；牛肉仍需计入动物性食物和嘌呤管理。具体份量依发作状态、化验、个体诱发史及合并疾病调整。",
+      "basisNote": "应用参考配方，未获爷爷实际用油盐，不冒称实测",
+      "familiarity": "familiar"
+    },
+    {
+      "id": "family-greens-mushroom",
+      "name": "青菜炒香菇",
+      "category": "veg",
+      "ingredients": [
+        {
+          "foodId": "greens",
+          "g": 300
+        },
+        {
+          "foodId": "guideShiitakeRaw",
+          "g": 100
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 5
+        },
+        {
+          "foodId": "oil",
+          "g": 8
+        },
+        {
+          "foodId": "salt",
+          "g": 0.8
+        },
+        {
+          "foodId": "water",
+          "g": 30
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 12,
+      "totalMin": 15,
+      "steps": [
+        "选新鲜青菜和鲜香菇；青菜掰开逐片洗净泥沙，沥水后把菜梗、菜叶分开，切约3厘米段。这里用鲜香菇，不能用等重干香菇直接替换。",
+        "香菇去硬蒂，洗净沥干，切约3—4毫米薄片；蒜拍碎切末，称好油8克和盐0.8克，水30克备好。",
+        "锅中加油，中火加热至油易流动但不冒烟，下蒜末炒约10秒，不要炒黑。",
+        "放香菇片，中大火翻炒约2分钟；变软后加入青菜梗炒约1分钟，锅太干时沿锅边加入备好的水。",
+        "加入青菜叶，翻炒约1—2分钟至叶片塌软；转中火加盖约1分钟，让香菇和菜梗都熟透，锅干则补少量水，不能只看叶子颜色判断。",
+        "开盖加盐翻匀约20秒；检查最厚的菜梗能轻松咬断、香菇全熟后立即盛盘。给孩子和老人时按咀嚼能力剪短，趁热吃。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "爷爷常做",
+        "家常菜",
+        "新手步骤"
+      ],
+      "estimated": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "veg",
+      "guideVersion": "family-1",
+      "noviceTips": [
+        "青菜在此指上海常吃的小青菜／上海青，香菇明确用鲜香菇，不能把口蘑、干香菇或通用菌菇当同一条成分数据。",
+        "如果锅小，分批翻炒比塞满一锅更容易受热均匀；不要为了保色留下生硬菜梗。"
+      ],
+      "healthNotes": [
+        "适合作为日常蔬菜轮换的一道，少量油和单一盐调味更容易掌握用量；不默认加虾米、蚝油和鸡精。",
+        "普通成人蔬菜参考是每天至少300克、深色占一半；本菜每参考份200克生蔬菜菌菇，只占全天一部分。",
+        "盐0.8克是两份整盘的投料示例，需结合当天其他食物和各人分餐，不等于实测钠。"
+      ],
+      "sourceRefs": [
+        {
+          "title": "你的后厨房：青菜炒香菇（下厨房）",
+          "url": "https://m.xiachufang.com/recipe/105940299/",
+          "relation": "清洗切片、蒜香快炒、少量水使菜熟透的结构参考；家庭版省略原菜虾米、糖及鸡精。"
+        },
+        {
+          "title": "中国居民膳食指南（2022）核心推荐（福建省卫健委）",
+          "url": "https://wjw.fujian.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+          "relation": "餐餐蔬菜、深色蔬菜和食物多样依据。"
+        },
+        {
+          "title": "成人高尿酸血症与痛风食养指南（2024年版），国家卫健委／广西疾控镜像",
+          "url": "https://www.gxcdc.org.cn/uploadfile/20240326/1711416875650984.pdf",
+          "relation": "印刷第11页表1-1把鲜香菇列为较低嘌呤食物，不支持把鲜香菇一概禁食。"
+        }
+      ],
+      "frequency": {
+        "label": "家庭排餐参考：每周1—3次，与其他蔬菜轮换",
+        "reason": "单菜次数只是避免天天重复的排餐示例；每天仍应餐餐有蔬菜，并轮换其他叶菜、瓜茄等达到多样化。鱼和畜禽肉的周总量单独合计，这道蔬菜不能替代蛋白质主菜。",
+        "weeklyRange": [
+          1,
+          3
+        ],
+        "scope": "家庭排餐参考，并非官方按单菜规定的次数",
+        "budgetGroup": "vegetable"
+      },
+      "nutritionComment": [
+        "青菜和鲜香菇可帮助增加蔬菜种类及膳食纤维来源；鲜香菇营养值未核验，不宣称精确纤维或钙含量。",
+        "不能把这盘菜当作治疗三高、降尿酸或单独补足哺乳期营养的手段。"
+      ],
+      "uricAcidNote": "2024食养指南所列鲜香菇与干制菌菇不是同重量同状态的食品；一般无需仅因名字含香菇就自动禁掉这道鲜菇蔬菜，仍按个人临床方案及诱发史调整。",
+      "basisNote": "应用参考配方，未获爷爷实际用油盐，不冒称实测",
+      "familiarity": "familiar"
+    },
+    {
+      "id": "family-amaranth-garlic",
+      "name": "蒜蓉炒米苋",
+      "category": "veg",
+      "ingredients": [
+        {
+          "foodId": "familyAmaranthRaw",
+          "g": 400
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 10
+        },
+        {
+          "foodId": "oil",
+          "g": 8
+        },
+        {
+          "foodId": "salt",
+          "g": 0.8
+        },
+        {
+          "foodId": "water",
+          "g": 20
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 12,
+      "totalMin": 15,
+      "steps": [
+        "米苋在此指苋菜的嫩茎叶，是叶菜，不是米饭或苋米。挑掉老梗、黄叶和根，取可食嫩叶嫩梗400克，逐次用清水洗净泥沙，再沥干。",
+        "把嫩梗和叶大致分开，切约3厘米段；蒜拍扁剁成小末，称出油8克、盐0.8克，备水20克。",
+        "锅中放油，中火加热至油流动、尚未冒烟，下蒜末炒约10—15秒闻到香味；蒜末若迅速变褐就立即降火。",
+        "先放苋菜嫩梗，中大火翻炒约30秒，再放叶片翻炒约1—2分钟，让菜均匀受热；锅太干时沿锅边加备好的水。",
+        "转中火加盖约1分钟，开盖翻动，确认叶片塌软、菜梗已熟透且能轻松咬断；粗梗较多时再加少量水烧软，不生吃或只烫表面。",
+        "加盐翻炒约20秒即出锅；不额外叠加生抽、蚝油或鸡精。给孩子和咀嚼较弱老人分菜时剪短，现做现吃。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "爷爷常做",
+        "家常菜",
+        "新手步骤"
+      ],
+      "estimated": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "veg",
+      "guideVersion": "family-1",
+      "noviceTips": [
+        "红苋菜炒出的红紫色菜汁是常见现象，不等于熟度合格；仍要检查梗叶均匀受热、彻底熟透。",
+        "优先买市场正常供应的鲜嫩苋菜，不自行采摘不认识的野菜；无新鲜苋菜时可换当季叶菜，换后需记实际食材。"
+      ],
+      "healthNotes": [
+        "适合当季作为常见叶菜轮换；蒜香可保留，重点是计量油盐，不需要用大量调味料提味。",
+        "不要把米苋当主食，也不要把苋菜宣传为补血、降糖或降尿酸的治疗菜。",
+        "合并肾病、限钾或使用抗凝药且有特定饮食要求的老人，按其既有专业方案安排蔬菜，不能只依据三高标签套用。"
+      ],
+      "sourceRefs": [
+        {
+          "title": "83小钟：蒜蓉苋菜（下厨房）",
+          "url": "https://m.xiachufang.com/recipe/91899/",
+          "relation": "苋菜去老梗、蒜末炒香后快炒的做法参考；本版不加糖，用清水充分清洗并计量油盐。"
+        },
+        {
+          "title": "中国居民膳食指南（2022）核心推荐（福建省卫健委）",
+          "url": "https://wjw.fujian.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+          "relation": "餐餐蔬菜、食物多样与少盐少油依据。"
+        }
+      ],
+      "frequency": {
+        "label": "家庭排餐参考：当季每周1—3次，与其他叶菜轮换",
+        "reason": "是日常蔬菜的一种选择，不必为了这道菜刻意反季采购。每参考份200克生净叶菜计入全天蔬菜量，并和青菜、其他瓜茄等轮换；此次数不是任何疾病的专门疗程。鱼类与畜禽总量仍需在全周菜谱中另行合计。",
+        "weeklyRange": [
+          1,
+          3
+        ],
+        "scope": "家庭排餐参考，并非官方按单菜规定的次数",
+        "budgetGroup": "vegetable"
+      },
+      "nutritionComment": [
+        "可作为绿叶蔬菜和膳食纤维的来源之一；品种、嫩老度和实际烹调影响成分，当前苋菜营养全部待核验。",
+        "不将含铁、含钙等笼统食材特点换算成整菜精确营养或治疗效果。"
+      ],
+      "basisNote": "应用参考配方，未获爷爷实际用油盐，不冒称实测",
+      "familiarity": "familiar"
     }
   ],
   "prepPacks": [
@@ -16017,6 +16560,48 @@ window.MealData = {
       "id": "novice-source-112",
       "title": "King Arthur Baking：贝果的揉面、整形、煮烤方法",
       "url": "https://www.kingarthurbaking.com/recipes/a-dozen-simple-bagels-recipe"
+    },
+    {
+      "id": "family-source-113",
+      "label": "苏州味道：响油鳝糊（下厨房）",
+      "url": "https://m.xiachufang.com/recipe/1037433/",
+      "note": "已读原作者用料和步骤；只取烹饪思路，不取其药用、降血糖宣称。"
+    },
+    {
+      "id": "family-source-114",
+      "label": "面包饱饱：芹菜香干炒牛肉（下厨房）",
+      "url": "https://m.xiachufang.com/recipe/105963983/",
+      "note": "已读原作者步骤；参考腌肉、分步炒再合炒，另作新手安全和调味适配。"
+    },
+    {
+      "id": "family-source-115",
+      "label": "你的后厨房：青菜炒香菇（下厨房）",
+      "url": "https://m.xiachufang.com/recipe/105940299/",
+      "note": "已读原作者步骤；改为鲜香菇蔬菜版，省去虾米、糖、鸡精。"
+    },
+    {
+      "id": "family-source-116",
+      "label": "83小钟：蒜蓉苋菜（下厨房）",
+      "url": "https://m.xiachufang.com/recipe/91899/",
+      "note": "已读原作者步骤；本版清水洗净、计量油盐、不加糖。"
+    },
+    {
+      "id": "family-source-117",
+      "label": "中国居民膳食指南（2022）核心推荐（福建省卫健委，来源中国疾控中心）",
+      "url": "https://wjw.fujian.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+      "note": "普通成人鱼2次或300—500克/周、畜禽肉300—500克/周，蔬菜至少300克/日，盐≤5克/日、油25—30克/日；不直接套成儿童、哺乳期或患病老人处方。"
+    },
+    {
+      "id": "family-source-118",
+      "label": "香港食物安全中心：烹煮及翻热",
+      "url": "https://www.cfs.gov.hk/tc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html",
+      "note": "中心温度至少75℃并保持30秒，或等效时间温度组合；用清洁食物温度计核验。"
+    },
+    {
+      "id": "family-source-119",
+      "label": "成人高尿酸血症与痛风食养指南（2024年版），国家卫健委／广西疾控官方镜像",
+      "url": "https://www.gxcdc.org.cn/uploadfile/20240326/1711416875650984.pdf",
+      "note": "本轮实际下载并读原文；印刷第2页适用范围、第5页限制嘌呤及豆干适量、第11页鲜香菇及牛肉分类；未见鳝鱼专属嘌呤值。"
     }
   ],
   "seasonal": {
@@ -16336,7 +16921,7 @@ window.MealData = {
     {
       "id": "book-ref-001",
       "name": "水煮蛋",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         30,
         32,
@@ -16348,7 +16933,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-1",
       "originalName": "水煮蛋",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-002",
@@ -16559,7 +17145,7 @@ window.MealData = {
     {
       "id": "book-ref-016",
       "name": "无糖豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         30,
         38
@@ -16568,7 +17154,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-16",
       "originalName": "无糖豆浆",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-017",
@@ -16670,7 +17257,7 @@ window.MealData = {
     {
       "id": "book-ref-024",
       "name": "水波蛋",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         30
       ],
@@ -16678,7 +17265,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-24",
       "originalName": "水波蛋",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-025",
@@ -17093,7 +17681,7 @@ window.MealData = {
     {
       "id": "book-ref-054",
       "name": "豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         32,
         36
@@ -17102,7 +17690,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-54",
       "originalName": "豆浆",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-055",
@@ -17355,7 +17944,7 @@ window.MealData = {
     {
       "id": "book-ref-073",
       "name": "牛奶",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         34
       ],
@@ -17363,7 +17952,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-73",
       "originalName": "牛奶",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-074",
@@ -17686,7 +18276,7 @@ window.MealData = {
     {
       "id": "book-ref-098",
       "name": "蒸鸡蛋羹",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         36
       ],
@@ -17694,7 +18284,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-98",
       "originalName": "蒸鸡蛋羹",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-099",
@@ -17830,7 +18421,7 @@ window.MealData = {
     {
       "id": "book-ref-109",
       "name": "无糖黑豆浆",
-      "category": "breakfast",
+      "category": "protein",
       "sourcePages": [
         38
       ],
@@ -17838,7 +18429,8 @@ window.MealData = {
       "notes": "已检索并整理为可直接选用的家庭参考做法；详情中注明相关做法来源和健康改写。",
       "recipeId": "guide-109",
       "originalName": "无糖黑豆浆",
-      "recipeReady": true
+      "recipeReady": true,
+      "originalCategory": "breakfast"
     },
     {
       "id": "book-ref-110",
@@ -18183,5 +18775,12 @@ window.MealData = {
     },
     "originalDetailedRecipes": 7,
     "note": "按逐名检索与相关做法整理，家庭版为有来源的应用改写，不冒称全是原书配方；未在厨房试做。"
-  }
+  },
+  "libraryVersion": "20261030-family5",
+  "familyDishIds": [
+    "family-eel",
+    "family-celery-tofu-beef",
+    "family-greens-mushroom",
+    "family-amaranth-garlic"
+  ]
 };
