@@ -1415,3 +1415,5 @@ details > :last-child:not(summary) {
     box-shadow: none;
   }
 }
+
+.label-upload{background:#f6f8f0;border:1px dashed #9aaa86}.label-upload h3{margin:0}.label-badge{font-size:12px}.label-nutrition-preview{border:1px solid var(--line);border-radius:12px;padding:4px 14px}.label-assessment h3{margin-top:0}.label-assessment details{margin-top:12px}.label-assessment .check-row{align-items:flex-start}#label-progress{accent-color:var(--green,#244d3d);height:18px}

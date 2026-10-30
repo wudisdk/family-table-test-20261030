@@ -22,6 +22,7 @@
     const foods = () => api.getFoods();
     const pantry = () => api.getHouse().pantry;
     const item = id => pantry().find(row => row.id === id);
+    const scanUI=host.PantryScan.create({...api,getEditingRow:()=>editingId?item(editingId):null,getEditingFood:()=>editingId?foods()[item(editingId)?.foodId]:null,openEditor:editor});
     function catalogFood(entry, foodId) {
       const n = entry.nutrients || entry.nutrition || {}, values = {};
       for (const key of Object.keys(nutrients)) { const value = key === 'carbs' ? (n.carbs ?? n.carb) : n[key]; values[key] = finite(value) ? value : null; }
@@ -42,13 +43,13 @@
       if (changed) api.save();
       return house.pantry;
     }
-    function statusText(food) { return food?.verifiedStatus === 'verified_label' ? '已核对标签' : food?.verifiedStatus === 'user_label' ? '按你填写的标签估算' : '标签待核对'; }
+    function statusText(food) { if(food?.verifiedStatus==='photo_confirmed')return '图片标签已核对';return food?.verifiedStatus === 'verified_label' ? '已核对标签' : food?.verifiedStatus === 'user_label' ? '按你填写的标签估算' : '标签待核对'; }
     function panel() {
       ensure();
-      return `<section class="panel stack" data-pantry-root><div class="row"><div><h2>家里常备</h2><p class="tiny">${pantry().filter(row => row.status !== 'out').length}样有货 · 用完点一下，补货再点回来</p></div>${button('添加食材', 'data-pantry-add', 'primary')}</div>
+      return `<section class="panel stack" data-pantry-root><div class="row"><div><h2>家里常备</h2><p class="tiny">${pantry().filter(row => row.status !== 'out').length}样有货 · ${pantry().filter(r=>foods()[r.foodId]?.labelPhotos?.length).length}/${pantry().length}项已传标签图</p></div><div class="wrap">${button('拍标签新增','data-pantry-scan-new','primary')}${button('添加食材', 'data-pantry-add', 'ghost small')}</div></div>
         <div class="form-grid"><input class="input" id="pantry-search" type="search" placeholder="搜索食材、品牌或口味" value="${h(query)}" aria-label="搜索常备食材"><select class="select" id="pantry-category" aria-label="常备食材分类"><option value="all">全部分类</option>${Object.entries(groups).map(([id, label]) => `<option value="${id}" ${category === id ? 'selected' : ''}>${label}</option>`).join('')}</select></div>
-        <div data-pantry-list>${pantry().map(row => { const food = foods()[row.foodId], show = (category === 'all' || row.group === category) && (!query || row.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
-          return `<div class="check-row" data-pantry-row data-pantry-name="${h(row.name.toLocaleLowerCase())}" data-pantry-group="${h(row.group)}" ${show ? '' : 'hidden'}><div style="min-width:0;flex:1"><strong>${h(row.name)}</strong><p class="tiny">${h(groups[row.group] || groups.other)} · ${row.status === 'out' ? '已吃完' : '家里有'} · ${statusText(food)}</p>${row.note ? `<p class="tiny">${h(row.note)}</p>` : ''}</div><div class="wrap">${button(row.status === 'out' ? '补货了' : '吃完了', `data-pantry-toggle="${h(row.id)}"`, row.status === 'out' ? 'small' : 'ghost small')}${button('详情 / 标签', `data-pantry-edit="${h(row.id)}"`, 'ghost small')}</div></div>`;
+        <div data-pantry-list>${pantry().map(row => { const food = foods()[row.foodId], showNote=row.note&&(!row.catalogId||row.note!==(host.MealData.pantryCatalog||[]).find(e=>e.id===row.catalogId)?.packageNote), show = (category === 'all' || row.group === category) && (!query || row.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
+          return `<div class="check-row" data-pantry-row data-pantry-name="${h(row.name.toLocaleLowerCase())}" data-pantry-group="${h(row.group)}" ${show ? '' : 'hidden'}><div style="min-width:0;flex:1"><strong>${h(row.name)}</strong><p class="tiny">${h(groups[row.group] || groups.other)} · ${row.status === 'out' ? '已吃完' : '家里有'} · ${statusText(food)}</p>${scanUI.badge(food)}${showNote ? `<p class="tiny">${h(row.note)}</p>` : ''}</div><div class="wrap">${button(row.status === 'out' ? '补货了' : '吃完了', `data-pantry-toggle="${h(row.id)}"`, row.status === 'out' ? 'small' : 'ghost small')}${button(food?.labelPhotos?.length?'补拍标签':'拍标签',`data-pantry-pick-for="${h(row.id)}"`,'small')}${button('详情 / 标签', `data-pantry-edit="${h(row.id)}"`, 'ghost small')}</div></div>`;
         }).join('')}</div><p class="tiny" data-pantry-empty ${pantry().some(row => (category === 'all' || row.group === category) && (!query || row.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()))) ? 'hidden' : ''}>没有找到；可以直接添加名字。</p>
         <p class="tiny">有货标记是采购参考，不会自动扣库存。调料油酱不单独生成采购项；用量仍计入配方营养。标签未核对的食品保留未知，不能凭品牌名算出精确营养。</p></section>`;
     }
@@ -56,7 +57,7 @@
       ensure(); editingId = id;
       const row = id ? item(id) : null, food = row ? foods()[row.foodId] : null;
       const refs = (food?.sourceRefs || []).filter(ref => /^https?:\/\//.test(ref.url || ''));
-      api.showSheet(row ? '常备食材与标签' : '添加常备食材', `<label class="field">食材 / 品牌名称<input class="input" id="pantry-name" maxlength="90" value="${h(row?.name || '')}" placeholder="例如：家里的钢切麦片"></label><p class="tiny">直接填名字即可保存，分类会自动识别。</p><details><summary>数量、分类和营养标签（可稍后补）</summary><div class="form-grid"><label class="field">分类<select class="select" id="pantry-edit-group"><option value="auto">自动识别</option>${Object.entries(groups).map(([key, label]) => `<option value="${key}" ${row?.group === key ? 'selected' : ''}>${label}</option>`).join('')}</select></label><label class="field">标签按哪种单位<select class="select" id="pantry-unit"><option value="g">每100g</option><option value="mL" ${food?.unit === 'mL' ? 'selected' : ''}>每100mL</option></select></label></div><label class="field">规格或剩余量备注<input class="input" id="pantry-note" maxlength="200" placeholder="例如：450g一包，剩半包" value="${h(row?.note || '')}"></label><p class="tiny">照包装的每100g / 每100mL填写；不知道就留空。不要将每份数值填在这里。</p><div class="form-grid">${Object.entries(nutrients).map(([key, [name, unit]]) => `<label class="field">${name}${key !== 'kcal' ? '（' + unit + '）' : ''}<input class="input" id="pantry-n-${key}" type="number" min="0" step="any" value="${finite(food?.nutrients?.[key]) ? food.nutrients[key] : ''}" placeholder="未知留空">${key === 'kcal' ? '<select class="select" id="pantry-energy-unit"><option value="kcal">千卡 kcal</option><option value="kJ">千焦 kJ</option></select>' : ''}</label>`).join('')}</div><label class="field">配料表（可选）<textarea class="input" id="pantry-ingredients" maxlength="2000" rows="3" placeholder="可照包装填写">${h(food?.ingredientsText || '')}</textarea></label></details>${food ? `<section class="notice tiny"><strong>${statusText(food)}</strong><p>${h(food.healthNote || '先结合实际配料和标签判断，不凭商品名称判断健康程度。')}</p>${food.portionNote ? `<p>${h(food.portionNote)}</p>` : ''}${refs.map(ref => `<p><a href="${h(ref.url)}" target="_blank" rel="noopener noreferrer">${h(ref.title || '查看标签来源')}</a></p>`).join('')}<p>修改品牌或营养会另存一个食材版本，过去餐单使用的旧资料保留。要让旧菜谱改用新标签，请在菜谱中调整食材。</p></section>` : ''}`, button('保存常备食材', 'data-pantry-save', 'primary'));
+      api.showSheet(row ? '常备食材与标签' : '添加常备食材', `<label class="field">食材 / 品牌名称<input class="input" id="pantry-name" maxlength="90" value="${h(row?.name || '')}" placeholder="例如：家里的钢切麦片"></label><p class="tiny">直接填名字即可保存，分类会自动识别。</p>${scanUI.editorPanel(food)}<details><summary>手动修正 / 其他资料（可选）</summary><div class="form-grid"><label class="field">分类<select class="select" id="pantry-edit-group"><option value="auto">自动识别</option>${Object.entries(groups).map(([key, label]) => `<option value="${key}" ${row?.group === key ? 'selected' : ''}>${label}</option>`).join('')}</select></label><label class="field">标签按哪种单位<select class="select" id="pantry-unit"><option value="g">每100g</option><option value="mL" ${food?.unit === 'mL' ? 'selected' : ''}>每100mL</option></select></label></div><label class="field">规格或剩余量备注<input class="input" id="pantry-note" maxlength="200" placeholder="例如：450g一包，剩半包" value="${h(row?.note || '')}"></label><p class="tiny">照包装的每100g / 每100mL填写；不知道就留空。不要将每份数值填在这里。</p><div class="form-grid">${Object.entries(nutrients).map(([key, [name, unit]]) => `<label class="field">${name}${key !== 'kcal' ? '（' + unit + '）' : ''}<input class="input" id="pantry-n-${key}" type="number" min="0" step="any" value="${finite(food?.nutrients?.[key]) ? food.nutrients[key] : ''}" placeholder="未知留空">${key === 'kcal' ? '<select class="select" id="pantry-energy-unit"><option value="kcal">千卡 kcal</option><option value="kJ">千焦 kJ</option></select>' : ''}</label>`).join('')}</div><label class="field">配料表（可选）<textarea class="input" id="pantry-ingredients" maxlength="2000" rows="3" placeholder="可照包装填写">${h(food?.ingredientsText || '')}</textarea></label></details>${food ? `<section class="notice tiny"><strong>${statusText(food)}</strong><p>${h(food.healthNote || '先结合实际配料和标签判断，不凭商品名称判断健康程度。')}</p>${food.portionNote ? `<p>${h(food.portionNote)}</p>` : ''}${refs.map(ref => `<p><a href="${h(ref.url)}" target="_blank" rel="noopener noreferrer">${h(ref.title || '查看标签来源')}</a></p>`).join('')}<p>修改品牌或营养会另存一个食材版本，过去餐单使用的旧资料保留。图片入库会更新今天及以后的自家配方；过去菜谱保留原标签。</p></section>` : ''}`, button('保存常备食材', 'data-pantry-save', 'primary'));
     }
     function saveEditor() {
       const value = id => document.getElementById(id)?.value ?? '';
@@ -81,6 +82,7 @@
       const empty = root.querySelector('[data-pantry-empty]'); if (empty) empty.hidden = visible > 0;
     }
     function click(target) {
+      if(scanUI.click(target))return true;
       if (target.hasAttribute('data-pantry-add')) { editor(); return true; }
       if (target.dataset.pantryEdit) { editor(target.dataset.pantryEdit); return true; }
       if (target.dataset.pantryToggle) { ensure(); const row = item(target.dataset.pantryToggle); if (row) { row.status = row.status === 'out' ? 'available' : 'out'; api.save(); api.render(); } return true; }
@@ -88,7 +90,7 @@
       return false;
     }
     function input(target) { if (target.id === 'pantry-search') { query = target.value.trim().slice(0, 100); filterRows(); return true; } return false; }
-    function change(target) { if (target.id === 'pantry-category') { category = groups[target.value] ? target.value : 'all'; filterRows(); return true; } return false; }
+    function change(target) { if(scanUI.change(target))return true;if (target.id === 'pantry-category') { category = groups[target.value] ? target.value : 'all'; filterRows(); return true; } return false; }
     return { panel, click, change, input, ensure };
   }
   host.PantryUI = { create, classify };

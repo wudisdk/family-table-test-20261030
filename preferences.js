@@ -37,7 +37,7 @@
    if(b.hasAttribute('data-pref-open')){open(b.dataset.prefOpen);return true;}
    if(b.hasAttribute('data-pref-save')){
     if(!openedId)return true;
-    const id=openedId;
+    const id=openedId,snapshots=members().map(p=>[p,JSON.parse(JSON.stringify(p))]);
     for(const p of members()){
      const select=Array.from(host.document.querySelectorAll('[data-pref-member]')).find(el=>el.dataset.prefMember===p.id);
      if(!select)continue;ensure(p);
@@ -46,17 +46,17 @@
      if(checked('data-pref-priority')){if(!p.priorityRecipes.includes(id))p.priorityRecipes.push(id);}else p.priorityRecipes=p.priorityRecipes.filter(x=>x!==id);
      if(checked('data-pref-avoid')){if(!p.temporaryAvoid.includes(id))p.temporaryAvoid.push(id);}else p.temporaryAvoid=p.temporaryAvoid.filter(x=>x!==id);
     }
-    api.save();api.closeSheet();openedId=null;api.render();api.notify('喜好已保存，菜谱排序和下次排餐会一起参考。');return true;
+    if(api.save()===false){for(const [p,snapshot] of snapshots){for(const k of Object.keys(p))delete p[k];Object.assign(p,snapshot);}api.notify('本机空间不足，喜好尚未保存；当前输入仍保留。');return true;}api.closeSheet();openedId=null;api.render();api.notify('喜好已保存，菜谱排序和下次排餐会一起参考。');return true;
    }
    if(b.hasAttribute('data-pref-save-foods')){
-    const p=person();if(!p)return true;ensure(p);
+    const p=person();if(!p)return true;const snapshot=JSON.parse(JSON.stringify(p));ensure(p);
     p.foodLikes=split(host.document.getElementById('pref-food-likes')?.value);p.foodDislikes=split(host.document.getElementById('pref-food-dislikes')?.value);
-    api.save();api.render();api.notify('食材喜好已保存，可以随时调整。');return true;
+    if(api.save()===false){for(const k of Object.keys(p))delete p[k];Object.assign(p,snapshot);api.notify('本机空间不足，食材喜好尚未保存；当前输入仍保留。');return true;}api.render();api.notify('食材喜好已保存，可以随时调整。');return true;
    }
    const key=['prefUp','prefDown','prefRemove'].find(k=>Object.hasOwn(b.dataset,k));
-   if(key){const p=person();if(!p)return true;ensure(p);const id=b.dataset[key],at=p.priorityRecipes.indexOf(id);if(at<0)return true;
+   if(key){const p=person();if(!p)return true;ensure(p);const before=p.priorityRecipes.slice(),id=b.dataset[key],at=p.priorityRecipes.indexOf(id);if(at<0)return true;
     if(key==='prefRemove')p.priorityRecipes.splice(at,1);else{const target=at+(key==='prefUp'?-1:1);if(target>=0&&target<p.priorityRecipes.length)[p.priorityRecipes[at],p.priorityRecipes[target]]=[p.priorityRecipes[target],p.priorityRecipes[at]];}
-    api.save();api.render();return true;
+    if(api.save()===false){p.priorityRecipes=before;return true;}api.render();return true;
    }
    return false;
   }
