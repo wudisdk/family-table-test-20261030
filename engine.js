@@ -4,7 +4,7 @@
  */
 (function (host) {
   'use strict';
-  const KEYS = ['kcal', 'protein', 'carbs', 'fat', 'fiber', 'sodium', 'calcium'];
+  const KEYS = ['kcal', 'protein', 'carbs', 'fat', 'fiber', 'sodium', 'calcium', 'saturatedFat'];
   const own = (o, k) => Object.prototype.hasOwnProperty.call(o || {}, k);
   const valid = n => typeof n === 'number' && Number.isFinite(n) && n >= 0;
   const positive = n => valid(n) && n > 0;
@@ -30,7 +30,7 @@
     const r = typeof recipe === 'string' ? recipeById(recipe) : recipe;
     if (!r || !Array.isArray(r.ingredients) || !valid(factor) || factor === 0) return [];
     const servings = positive(r.portions) ? r.portions : 1;
-    const groups = member && member.portions || {};
+    const groups = profileAssessment(member).portionFactors;
     return mergeItems([r.ingredients.map(row => {
       const group = food(row.foodId)?.group;
       // Mixed finished foods keep their ingredient ratio, including condiments.
@@ -91,22 +91,134 @@
     return { type, min: type === 'maximum' ? null : min, max: type === 'minimum' ? null : max, source: String(goal.source || '用户已确认的个人目标') };
   }
 
-  function goals(member) {
-    const m = member || {};
+  const GROUPS = ['grain', 'protein', 'veg', 'fruit', 'dairy', 'nuts'];
+  const ACTIVITY = { sedentary: 1.2, light: 1.375, moderate: 1.55, active: 1.725, '以久坐为主': 1.2, '轻度活动': 1.375, '中度活动': 1.55, '较高活动': 1.725 };
+  const PROFILE_SOURCES = [
+    { title: 'Mifflin 等：健康成人静息能量预测公式（1990原始研究）', url: 'https://pubmed.ncbi.nlm.nih.gov/2305711/' },
+    { title: '中国疾控中心：产后6个月内哺乳能量参考（2026）', url: 'https://www.chinacdc.cn/jkkp/yyjk/rqyy/202609/t20260910_1839987.html' },
+    { title: 'CDC：哺乳期能量与喂养方式（2026）', url: 'https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/maternal-diet.html' },
+    { title: '美国DGA 2020—2025：哺乳第二个6个月额外能量（旧版阶段参考）', url: 'https://www.cdc.gov/breastfeeding-data/media/pdfs/2024/05/Dietary_Guidelines_for_Americans_2020-2025.pdf' },
+    { title: '中华医学会：乳母蛋白质RNI参考80g/日（2023科普引2013版DRIs）', url: 'https://www.cma.org.cn/art/2023/7/14/art_4584_51668.html' }
+  ];
+
+  function personalGoals(m) {
     const result = Object.fromEntries(KEYS.map(key => [key, null]));
-    const confirmed = m.profileConfirmed === true || m.confirmed === true;
-    if (confirmed && valid(m.age) && m.age >= 18 && m.age <= 64 && ['male', 'female'].includes(m.sex) && m.stage === 'adult' && !m.specialDiet) {
-      result.protein = { type: 'minimum', min: m.sex === 'male' ? 65 : 55, max: null, source: 'WS/T 578.1-2017：健康成人蛋白质RNI参考，非上限' };
-      result.fiber = { type: 'minimum', min: 25, max: null, source: '健康成人膳食纤维25—30g/日参考，非UL' };
-      result.sodium = { type: 'maximum', min: null, max: 2000, source: 'WHO成人钠摄入少于2000mg/日；这是限量，不需吃满' };
-    }
-    for (const key of KEYS) if (own(m.goals, key)) result[key] = sanitizeGoal(m.goals[key]);
+    for (const source of [m.goals, m.customGoals]) for (const key of KEYS) if (own(source, key)) result[key] = sanitizeGoal(source[key]);
     return result;
   }
 
+  function profileAssessment(member) {
+    const m = member || {}, targets = personalGoals(m), missingFields = [], basis = [];
+    let energyKcal = null, reason = '', ready = false, source = 'pending';
+    const personalEnergy = targets.kcal;
+    const manualEnergy = personalEnergy?.type === 'range' && positive(personalEnergy.min) && positive(personalEnergy.max);
+    const confirmed = m.profileConfirmed === true || m.confirmed === true;
+    if (manualEnergy) {
+      energyKcal = Math.round((personalEnergy.min + personalEnergy.max) / 2);
+      ready = true; source = 'personal';
+      basis.push('使用已录入的个人能量范围；配餐以范围中点估算，不重新推定疾病或照护目标。');
+      reason = '按个人目标调整参考份量';
+    } else {
+      if (!confirmed) missingFields.push('确认个人资料');
+      if (!valid(m.age) || m.age < 18 || m.age > 64) missingFields.push('18—64岁成人年龄');
+      if (!['male', 'female'].includes(m.sex)) missingFields.push('性别');
+      if (!positive(m.height) || m.height < 120 || m.height > 220) missingFields.push('身高');
+      if (!positive(m.weight) || m.weight < 30 || m.weight > 250) missingFields.push('体重');
+      if (!own(ACTIVITY, m.activity)) missingFields.push('活动程度');
+      if (!['adult', 'lactating'].includes(m.stage)) reason = '儿童、65岁以上长者或照护成员请录入适用的个人目标；不套用普通成人公式。';
+      else if (m.specialDietState === 'yes' || m.specialDiet !== false && m.specialDietState !== 'unknown') reason = '请确认有无特殊饮食医嘱；有医嘱时使用个人目标。';
+      else if (missingFields.length) reason = '先补充' + missingFields.join('、') + '，当前仅显示配方参考份。';
+      else if (m.stage === 'lactating' && (m.sex !== 'female' || !valid(m.lactationMonths) || m.lactationMonths > 12 || m.lactationMode !== 'exclusive')) {
+        if (!valid(m.lactationMonths)) missingFields.push('产后月数');
+        if (!['exclusive', 'partial'].includes(m.lactationMode)) missingFields.push('哺乳方式');
+        reason = '哺乳期需确认产后月数与喂养方式；混合喂养或产后12个月以上请录个人目标，不按固定比例猜测。';
+      } else {
+        const resting = 10 * m.weight + 6.25 * m.height - 5 * m.age + (m.sex === 'male' ? 5 : -161);
+        const extra = m.stage === 'lactating' ? 400 : 0;
+        energyKcal = Math.round((resting * ACTIVITY[m.activity] + extra) / 50) * 50;
+        ready = true; source = 'estimated'; reason = '按维持能量粗估调整参考份量';
+        if (m.specialDietState === 'unknown') { reason += '；饮食医嘱待核对'; basis.push('尚不清楚是否有特殊饮食医嘱：这里只估普通维持需要，饮食医嘱待核对；若已有医嘱请改用个人目标。'); }
+        basis.push('Mifflin-St Jeor静息能量估计 × 自选活动系数；用于维持体重的初步排餐，不设置减重热量缺口。');
+        basis.push('活动系数1.2 / 1.375 / 1.55 / 1.725是本产品的排餐假设；公式并非实测能量消耗。');
+        if (extra) basis.push(m.lactationMonths <= 6 ? '纯母乳0—6月：在成人估算上加400千卡，参考中国疾控2026科普；需随泌乳量和体重趋势调整。' : '持续母乳6—12月：暂加400千卡，参考DGA 2020—2025的阶段性数据及CDC；实际需求随辅食和泌乳量变化。');
+        if (!targets.kcal) targets.kcal = { type: 'range', min: Math.round(energyKcal * .9), max: Math.round(energyKcal * 1.1), source: '维持能量粗估±10%的产品排餐参考区间，不是临床需要量范围' };
+        if (!targets.protein && m.stage === 'adult') targets.protein = { type: 'minimum', min: m.sex === 'male' ? 65 : 55, max: null, source: 'WS/T 578.1-2017：健康成人蛋白质RNI参考，非上限' };
+        if (!targets.protein && m.stage === 'lactating') targets.protein = { type: 'minimum', min: 80, max: null, source: '乳母蛋白质RNI 80g/日参考：中华医学会2023科普所引2013版DRIs；不是上限，有特殊饮食医嘱时另定' };
+        if (!targets.fiber) targets.fiber = { type: 'minimum', min: 25, max: null, source: '健康成人膳食纤维25—30g/日参考，非UL' };
+        if (!targets.sodium) targets.sodium = { type: 'maximum', min: null, max: 2000, source: 'WHO成人钠摄入少于2000mg/日；限量不需吃满' };
+      }
+    }
+    // A malformed personal range is never treated as an automatic energy goal.
+    if (personalEnergy?.type === 'range' && !manualEnergy) { ready = false; energyKcal = null; reason = '个人能量范围需为大于0的有效上下限。'; source = 'pending'; }
+    if (ready && positive(energyKcal) && !targets.saturatedFat) targets.saturatedFat={type:'maximum',min:null,max:clean(energyKcal*.1/9),source:'WHO 2023：饱和脂肪不超过能量10%的通用参考，个人医嘱另行设置'};
+    const portionFactors = Object.fromEntries(GROUPS.map(group => [group, 1]));
+    if (ready) {
+      const scale = energyKcal / 2000;
+      // Recipe baseline is a product reference, not proof that a day meets all targets.
+      portionFactors.grain = clean(scale);
+      portionFactors.protein = clean(Math.max(.85, Math.min(scale, 1.2)));
+      portionFactors.veg = clean(Math.max(1, Math.min(scale, 1.25)));
+      portionFactors.fruit = clean(Math.max(.8, Math.min(scale, 1.2)));
+      portionFactors.dairy = 1;
+      portionFactors.nuts = clean(Math.max(.8, Math.min(scale, 1.2)));
+      basis.push('参考菜谱按2000千卡成人配餐基线调整；蛋白食物、蔬果和奶类不随能量无限增加。这些倍率是产品起点，是否够量仍看全天食材营养合计。');
+    }
+    if (m.portionMode === 'manual' || !ready && m.portionMode !== 'auto') for (const group of GROUPS) if (positive(m.portions?.[group])) portionFactors[group] = m.portions[group];
+    for (const group of GROUPS) if (positive(m.portionOverrides?.[group])) portionFactors[group] = m.portionOverrides[group];
+    return { ready, reason, energyKcal, targets, portionFactors, basis, missingFields, source, sourceRefs: PROFILE_SOURCES.map(item => ({ ...item })) };
+  }
+
+  function goals(member) {
+    return profileAssessment(member).targets;
+  }
+
+  function mealPortions(recipes, member, mealType, factor = 1) {
+    const selected = (Array.isArray(recipes) ? recipes : []).map(r => typeof r === 'string' ? recipeById(r) : r);
+    const rows = selected.filter(r => r && Array.isArray(r.ingredients)).map(r => ({ recipeId: r.id, recipe: r, items: portion(r, member, 1) }));
+    const assessment = profileAssessment(member), ratios = member?.stage === 'lactating'
+      ? { breakfast: .25, lunch: .30, dinner: .30, snack: .15 }
+      : { breakfast: .25, lunch: .35, dinner: .30, snack: .10 };
+    const ratio = ratios[mealType], finalFactor = positive(factor) ? factor : factor === 0 ? 0 : 1;
+    const finish = (calibrated, calibrationNote, targetKcal = null) => {
+      const byRecipe = rows.map(row => ({ recipeId: row.recipeId, items: row.items.map(i => ({ foodId: i.foodId, g: valid(i.g) ? clean(i.g * finalFactor) : null })) }));
+      return { items: mergeItems(byRecipe.map(row => row.items)), byRecipe, calibrated, calibrationNote, targetKcal: targetKcal === null ? null : clean(targetKcal * finalFactor) };
+    };
+    if (!assessment.ready) return finish(false, '个人资料或目标未齐，未个性化校准；目前保留配方参考份量。' + assessment.reason);
+    if (member?.portionMode === 'manual' || GROUPS.some(group => positive(member?.portionOverrides?.[group]))) return finish(false, '已使用手动份量，不自动按能量改量；请核对全天营养合计。');
+    if (!positive(ratio)) return finish(false, '餐次未识别，保留参考份量。');
+    if (!rows.length || rows.length !== selected.length || rows.some(row => row.recipe.incomplete || !row.recipe.ingredients.length)) return finish(false, '菜谱原料用量未齐，不能校准；未填写的菜不当作零摄入。');
+    const all = nutrition(mergeItems(rows.map(row => row.items)));
+    if (all.coverage.kcal !== 1 || !positive(all.values.kcal)) return finish(false, '热量成分或原料用量未齐，暂不校准；已知小计不代表整餐。');
+    const target = assessment.energyKcal * ratio;
+    const isMainMeal = mealType === 'lunch' || mealType === 'dinner';
+    const adjustable = rows.filter(row => {
+      const groups = new Set(row.recipe.ingredients.map(i => food(i.foodId)?.group).filter(g => g && g !== 'condiment'));
+      return isMainMeal ? row.recipe.category === 'grain' && !groups.has('protein') : row.recipe.category === mealType && groups.size >= 2;
+    });
+    if (!adjustable.length) return finish(false, isMainMeal ? '本餐没有可调整的纯主食，请加一份主食；不会用加肉补足热量。' : '本餐没有可整体调整的早餐或加餐组合，保留各道参考量并核对全天营养。', target);
+    const adjustableKcal = adjustable.reduce((sum, row) => sum + (nutrition(row.items).values.kcal || 0), 0);
+    if (!positive(adjustableKcal)) return finish(false, '可调主食或组合的热量为零，不能据此校准，请补充适量主食。', target);
+    const required = (target - (all.values.kcal - adjustableKcal)) / adjustableKcal;
+    const min = .5, max = isMainMeal ? 2.5 : 2, applied = Math.max(min, Math.min(max, required));
+    for (const row of adjustable) row.items = row.items.map(i => ({ foodId: i.foodId, g: clean(i.g * applied) }));
+    const actual = nutrition(mergeItems(rows.map(row => row.items))).values.kcal;
+    const calibrated = required >= min && required <= max && Math.abs(actual - target) < .5;
+    const distribution = member?.stage === 'lactating' ? '早25% / 午30% / 晚30% / 加餐15%' : '早25% / 午35% / 晚30% / 加餐10%';
+    const action = isMainMeal ? '只调整主食，肉菜份量不因补热量而增加' : '仅整体调整组合，保持组合中原料的当前配比';
+    let note = '按' + distribution + '分配每日维持能量；这是产品排餐假设。' + action + '。';
+    if (calibrated) note += '已按本餐能量参考校准；并不代表其他营养素全部达标。';
+    else note += '所需调整超出' + min + '—' + max + '倍，已限制调整，未完成校准；本餐与能量参考' + (actual < target ? '仍差约' : '仍超出约') + Math.round(Math.abs(actual - target) * finalFactor) + '千卡，请调整菜式或食材。';
+    if (finalFactor !== 1) note += '已另按用户选择的本餐份量倍数调整。';
+    return finish(calibrated, note, target);
+  }
+
   function status(value, goal, coverage) {
-    if (!valid(value) || coverage !== 1) return { label: '数据待补充', kind: 'unknown' };
+    if (!valid(value)) return { label: '数据待补充', kind: 'unknown' };
     const g = sanitizeGoal(goal);
+    if (coverage !== 1) {
+      if (g?.type === 'maximum' && value >= g.max) return { label: '已知部分已达到或超过限量，实际可能更高', kind: 'high' };
+      return { label: '数据待补充', kind: 'unknown' };
+    }
     if (!g) return { label: '目标待确认', kind: 'unknown' };
     if (g.type === 'minimum') return value < g.min ? { label: '低于参考量', kind: 'low' } : { label: '达到参考量', kind: 'ok' };
     if (g.type === 'maximum') return value >= g.max ? { label: '达到或超过限量', kind: 'high' } : { label: '低于限量', kind: 'ok' };
@@ -197,5 +309,5 @@
     return result;
   }
 
-  host.MealEngine = Object.freeze({ portion, nutrition, mergeItems, score, goals, status, compare, roughLog });
+  host.MealEngine = Object.freeze({ portion, mealPortions, nutrition, mergeItems, score, goals, profileAssessment, status, compare, roughLog });
 })(window);

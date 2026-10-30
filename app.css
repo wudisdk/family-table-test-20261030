@@ -1161,7 +1161,26 @@ details > :last-child:not(summary) {
 .week-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; min-width: 0; }
 .day-card { padding: 20px; }
 .day-card h2 { font-size: 21px; }
-.week-meal-row { display: grid; grid-template-columns: 42px minmax(0,1fr) 62px; align-items: start; gap: 8px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.week-meal-row { display: grid; grid-template-columns: 52px minmax(0,1fr) 54px; align-items: start; gap: 8px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.week-meal-row > span:first-child { display: flex; flex-direction: column; gap: 4px; line-height: 1.5; }
+.week-meal-row > span:first-child small { font-size: 11px; }
+.week-overview .wrap { align-items: center; }
+.week-overview select { width: auto; min-width: 100px; }
+.profile-banner { padding: 12px 16px; margin: 12px 0; }
+.health-rules { margin-bottom: 10px; }
+.health-rules summary { font-weight: 600; cursor: pointer; }
+.health-review { margin-bottom: 12px; }
+@media(max-width:640px) {
+ .profile-banner { padding: 10px 12px; }
+ .profile-banner p { margin: 2px 0 0; font-size: 12px; }
+ .week-overview { padding: 14px; gap: 10px; }
+ .week-overview h2 { font-size: 20px; }
+ .week-overview > .row > div > p { display: none; }
+ .week-overview > p { margin: 0; font-size: 12px; }
+ .week-overview > .row { align-items: center; gap: 8px; }
+ .week-overview > .row button { padding: 10px 12px; }
+ .week-overview .wrap button { padding: 8px 10px; font-size: 13px; }
+}
 .week-meal-row:last-child { border-bottom: 0; }
 .week-meal-row p { margin-bottom: 3px; }
 .week-meal-row button { min-height: 44px; padding: 8px; font-size: 14px; }
