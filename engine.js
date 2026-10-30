@@ -33,8 +33,11 @@
     const groups = member && member.portions || {};
     return mergeItems([r.ingredients.map(row => {
       const group = food(row.foodId)?.group;
-      // Each food group is independent. Condiments never inherit a child's whole-plate ratio.
-      const multiplier = group !== 'condiment' && valid(groups[group]) ? groups[group] : 1;
+      // Mixed finished foods keep their ingredient ratio, including condiments.
+      // Other dishes retain independent food-group multipliers.
+      const multiplier = r.fixedMix === true
+        ? valid(groups[r.sizingGroup]) ? groups[r.sizingGroup] : 1
+        : group !== 'condiment' && valid(groups[group]) ? groups[group] : 1;
       return { foodId: row.foodId, g: valid(row.g) ? clean(row.g / servings * multiplier * factor) : null };
     })]);
   }

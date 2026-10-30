@@ -1279,6 +1279,534 @@ window.MealData = {
         "state": "具体产品待核对；示例用量不等于个人推荐量"
       },
       "verified": false
+    },
+    "squidRaw": {
+      "id": "squidRaw",
+      "name": "鱿鱼可食部（生）",
+      "unit": "g",
+      "group": "protein",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:squidRaw",
+        "state": "去内脏和不可食部的生鱿鱼；具体品种与成分待核对"
+      },
+      "verified": false
+    },
+    "beefBrisketRaw": {
+      "id": "beefBrisketRaw",
+      "name": "牛腩（生）",
+      "unit": "g",
+      "group": "protein",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:beefBrisketRaw",
+        "state": "生牛腩可食部；脂肪比例、修整程度和成分待核对，不能套用瘦牛肉数值"
+      },
+      "verified": false
+    },
+    "pomfretRaw": {
+      "id": "pomfretRaw",
+      "name": "鲳鱼去骨鱼肉（生）",
+      "unit": "g",
+      "group": "protein",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:pomfretRaw",
+        "state": "去骨生鲳鱼可食部；原方整鱼重量未知，应用参考量不等于整鱼重量"
+      },
+      "verified": false
+    },
+    "greekYogurtPlain": {
+      "id": "greekYogurtPlain",
+      "name": "原味希腊酸奶",
+      "unit": "g",
+      "group": "dairy",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:greekYogurtPlain",
+        "state": "成品原味希腊酸奶；具体品牌、是否加糖、脂肪含量及成分待核对，不套用普通酸奶数据"
+      },
+      "verified": false
+    },
+    "readyMixedSeeds": {
+      "id": "readyMixedSeeds",
+      "name": "即食混合种子",
+      "unit": "g",
+      "group": "nuts",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:readyMixedSeeds",
+        "state": "选择包装注明可直接食用的混合种子；组成与品牌待核对，不把1包视作固定克数"
+      },
+      "verified": false
+    },
+    "tomatoPaste": {
+      "id": "tomatoPaste",
+      "name": "番茄膏",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:tomatoPaste",
+        "state": "番茄膏成品；浓缩程度、配料和品牌营养待核对，不套用生番茄数值"
+      },
+      "verified": false
+    },
+    "garlicRaw": {
+      "id": "garlicRaw",
+      "name": "蒜（生）",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:garlicRaw",
+        "state": "去皮生蒜可食部；成分待核对"
+      },
+      "verified": false
+    },
+    "gingerRaw": {
+      "id": "gingerRaw",
+      "name": "姜（生）",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:gingerRaw",
+        "state": "生姜可食部；成分待核对"
+      },
+      "verified": false
+    },
+    "scallionRaw": {
+      "id": "scallionRaw",
+      "name": "葱（生）",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:scallionRaw",
+        "state": "去根生葱可食部；成分待核对"
+      },
+      "verified": false
+    },
+    "salt": {
+      "id": "salt",
+      "name": "食盐",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:salt",
+        "state": "实际称量的食盐；产品钠含量待匹配，不将未知钠当作零"
+      },
+      "verified": false
+    },
+    "blackPepper": {
+      "id": "blackPepper",
+      "name": "黑胡椒",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:blackPepper",
+        "state": "黑胡椒粒或现磨黑胡椒；具体产品成分待核对"
+      },
+      "verified": false
+    },
+    "basilDried": {
+      "id": "basilDried",
+      "name": "罗勒碎",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:basilDried",
+        "state": "烹调用罗勒碎；干鲜状态与产品成分待核对"
+      },
+      "verified": false
+    },
+    "water": {
+      "id": "water",
+      "name": "饮用水",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:water",
+        "state": "烹调加入的饮用水；水中矿物质和全部营养字段保持未匹配状态"
+      },
+      "verified": false
+    },
+    "butter": {
+      "id": "butter",
+      "name": "黄油",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:butter",
+        "state": "黄油成品；含盐状态、脂肪含量与品牌标签待核对"
+      },
+      "verified": false
+    },
+    "wheatFlour": {
+      "id": "wheatFlour",
+      "name": "面粉",
+      "unit": "g",
+      "group": "grain",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:wheatFlour",
+        "state": "干面粉；原方未写筋度，具体产品成分待核对"
+      },
+      "verified": false
+    },
+    "wholeWheatFlour": {
+      "id": "wholeWheatFlour",
+      "name": "全麦粉",
+      "unit": "g",
+      "group": "grain",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:wholeWheatFlour",
+        "state": "干全麦粉；具体产品成分待核对"
+      },
+      "verified": false
+    },
+    "almondFlour": {
+      "id": "almondFlour",
+      "name": "杏仁粉",
+      "unit": "g",
+      "group": "nuts",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:almondFlour",
+        "state": "烘焙用杏仁粉；不能套用整粒杏仁数值，产品成分待核对"
+      },
+      "verified": false
+    },
+    "honey": {
+      "id": "honey",
+      "name": "蜂蜜",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:honey",
+        "state": "蜂蜜成品；品牌与营养数据待核对"
+      },
+      "verified": false
+    },
+    "bakingPowder": {
+      "id": "bakingPowder",
+      "name": "泡打粉",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:bakingPowder",
+        "state": "烘焙泡打粉；品牌配料与钠含量待核对"
+      },
+      "verified": false
+    },
+    "cream": {
+      "id": "cream",
+      "name": "奶油",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:cream",
+        "state": "奶油成品；原方未说明品类或脂肪含量，成分待核对"
+      },
+      "verified": false
+    },
+    "beetrootPowder": {
+      "id": "beetrootPowder",
+      "name": "甜菜根粉",
+      "unit": "g",
+      "group": "veg",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:beetrootPowder",
+        "state": "干甜菜根粉；不能套用鲜甜菜根数据，具体产品成分待核对"
+      },
+      "verified": false
+    },
+    "levain": {
+      "id": "levain",
+      "name": "鲁邦种",
+      "unit": "g",
+      "group": "grain",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:levain",
+        "state": "预先备好的鲁邦种；含水率、喂养配比、成熟状态及营养成分待核对"
+      },
+      "verified": false
+    },
+    "yeastPowder": {
+      "id": "yeastPowder",
+      "name": "酵母粉",
+      "unit": "g",
+      "group": "condiment",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:yeastPowder",
+        "state": "烘焙酵母粉；具体产品成分待核对"
+      },
+      "verified": false
+    },
+    "driedCranberries": {
+      "id": "driedCranberries",
+      "name": "蔓越莓干",
+      "unit": "g",
+      "group": "fruit",
+      "nutrients": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null,
+        "fiber": null,
+        "sodium": null,
+        "calcium": null
+      },
+      "source": {
+        "label": "应用参考配方原料；营养数据待匹配可靠成分表或品牌标签",
+        "url": "",
+        "id": "pending:v2:driedCranberries",
+        "state": "应用参考配方选蔓越莓干；原方表仅写蔓越莓，糖渍情况与品牌成分待核对"
+      },
+      "verified": false
     }
   },
   "recipes": [
@@ -1670,38 +2198,6 @@ window.MealData = {
       "estimated": true
     },
     {
-      "id": "salmon",
-      "name": "柠檬烤三文鱼",
-      "category": "protein",
-      "ingredients": [
-        {
-          "foodId": "salmon",
-          "g": 100
-        },
-        {
-          "foodId": "oil",
-          "g": 2
-        }
-      ],
-      "portions": 1,
-      "cookedG": null,
-      "activeMin": 5,
-      "totalMin": 25,
-      "steps": [
-        "鱼肉用柠檬、黑胡椒调味。",
-        "烤至中心熟透，另配主食和蔬菜。"
-      ],
-      "prep": {
-        "mode": "fresh"
-      },
-      "tags": [
-        "烤箱省心",
-        "标准份示例",
-        "熟重待实测"
-      ],
-      "estimated": true
-    },
-    {
       "id": "shrimp",
       "name": "蒜蓉虾仁",
       "category": "protein",
@@ -1729,43 +2225,6 @@ window.MealData = {
       "tags": [
         "家常做法",
         "10分钟",
-        "标准份示例",
-        "熟重待实测"
-      ],
-      "estimated": true
-    },
-    {
-      "id": "chicken",
-      "name": "芹菜炒鸡丝",
-      "category": "protein",
-      "ingredients": [
-        {
-          "foodId": "chicken",
-          "g": 100
-        },
-        {
-          "foodId": "celery",
-          "g": 100
-        },
-        {
-          "foodId": "oil",
-          "g": 5
-        }
-      ],
-      "portions": 1,
-      "cookedG": null,
-      "activeMin": 15,
-      "totalMin": 15,
-      "steps": [
-        "鸡肉切丝，芹菜切短段，生肉与蔬菜分开处理。",
-        "用本份油量将鸡肉炒至熟透，再加入芹菜炒熟。"
-      ],
-      "prep": {
-        "mode": "fresh"
-      },
-      "tags": [
-        "家常做法",
-        "菜肉同锅",
         "标准份示例",
         "熟重待实测"
       ],
@@ -1803,78 +2262,6 @@ window.MealData = {
       "tags": [
         "家常做法",
         "一锅做",
-        "标准份示例",
-        "熟重待实测"
-      ],
-      "estimated": true
-    },
-    {
-      "id": "eggmush",
-      "name": "菌菇蒸蛋",
-      "category": "protein",
-      "ingredients": [
-        {
-          "foodId": "egg",
-          "g": 50
-        },
-        {
-          "foodId": "mushroom",
-          "g": 70
-        },
-        {
-          "foodId": "oil",
-          "g": 2
-        }
-      ],
-      "portions": 1,
-      "cookedG": null,
-      "activeMin": 7,
-      "totalMin": 20,
-      "steps": [
-        "菌菇充分煮熟，蛋液加水后与菌菇拌匀。",
-        "蒸至蛋液完全凝固；实际成品重包含加入的水。"
-      ],
-      "prep": {
-        "mode": "fresh"
-      },
-      "tags": [
-        "软烂好入口",
-        "标准份示例",
-        "熟重待实测"
-      ],
-      "estimated": true
-    },
-    {
-      "id": "beef",
-      "name": "萝卜炖瘦牛肉",
-      "category": "protein",
-      "ingredients": [
-        {
-          "foodId": "beef",
-          "g": 90
-        },
-        {
-          "foodId": "radish",
-          "g": 150
-        },
-        {
-          "foodId": "oil",
-          "g": 3
-        }
-      ],
-      "portions": 1,
-      "cookedG": null,
-      "activeMin": 15,
-      "totalMin": 75,
-      "steps": [
-        "牛肉切小块，焯后炖至软。",
-        "加入萝卜炖透；标为被动烹饪较久。"
-      ],
-      "prep": {
-        "mode": "fresh"
-      },
-      "tags": [
-        "周末备餐",
         "标准份示例",
         "熟重待实测"
       ],
@@ -1953,8 +2340,8 @@ window.MealData = {
       "estimated": true
     },
     {
-      "id": "broccoli",
-      "name": "蒜香西兰花",
+      "id": "broccoli-garlic",
+      "name": "蒜蓉西兰花",
       "category": "veg",
       "ingredients": [
         {
@@ -1964,6 +2351,10 @@ window.MealData = {
         {
           "foodId": "oil",
           "g": 4
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 5
         }
       ],
       "portions": 1,
@@ -1971,8 +2362,8 @@ window.MealData = {
       "activeMin": 10,
       "totalMin": 10,
       "steps": [
-        "西兰花切小朵清洗。",
-        "焯熟后少油翻炒。"
+        "西兰花切小朵洗净，蒜切末。",
+        "西兰花焯至将熟后沥水；按本份油量炒香蒜末，放入西兰花炒熟。"
       ],
       "prep": {
         "mode": "fresh"
@@ -1982,7 +2373,8 @@ window.MealData = {
         "标准份示例",
         "熟重待实测"
       ],
-      "estimated": true
+      "estimated": true,
+      "basisNote": "应用参考配方：西兰花200g、蒜5g、植物油4g；调味另按实际记录，不代表书中菜单的精确配方。"
     },
     {
       "id": "mixedveg",
@@ -2337,43 +2729,6 @@ window.MealData = {
       "estimated": true
     },
     {
-      "id": "broccolitofu",
-      "name": "西兰花豆腐煮",
-      "category": "protein",
-      "ingredients": [
-        {
-          "foodId": "broccoliRaw",
-          "g": 150
-        },
-        {
-          "foodId": "tofuCalciumRaw",
-          "g": 150
-        },
-        {
-          "foodId": "oil",
-          "g": 3
-        }
-      ],
-      "portions": 1,
-      "cookedG": null,
-      "activeMin": 8,
-      "totalMin": 15,
-      "steps": [
-        "豆腐切块，西兰花用鲜品或按餐分装的焯水冷冻原料。",
-        "加少量水煮至熟透，按本份油量调味；此菜钠钙及部分宏量数据未知。"
-      ],
-      "prep": {
-        "mode": "blanched-frozen"
-      },
-      "tags": [
-        "冷冻组件",
-        "仅已知营养字段计入",
-        "标准份示例",
-        "熟重待实测"
-      ],
-      "estimated": true
-    },
-    {
       "id": "oatseedpaste",
       "name": "燕麦坚果糊",
       "category": "breakfast",
@@ -2423,62 +2778,950 @@ window.MealData = {
       "estimated": true
     },
     {
-      "id": "yuxiang",
-      "name": "鱼香肉丝",
+      "id": "salmon-pan",
+      "name": "香煎三文鱼",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "salmon",
+          "g": 120
+        },
+        {
+          "foodId": "oil",
+          "g": 3
+        },
+        {
+          "foodId": "salt",
+          "g": 0.5
+        },
+        {
+          "foodId": "blackPepper",
+          "g": 0.2
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 10,
+      "totalMin": 25,
+      "steps": [
+        "三文鱼擦干，用配方中的盐和黑胡椒调味，放置约10分钟。",
+        "平底锅加植物油，先煎鱼皮一面，定型后翻面继续加热。",
+        "按鱼块厚度调整火力与时间，确认中心熟透再盛出，另配主食和蔬菜。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "家常会做",
+        "默认候选",
+        "熟透做法",
+        "应用参考配方",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        12,
+        13,
+        14
+      ],
+      "originalIngredients": [
+        {
+          "name": "三文鱼",
+          "amount": 1,
+          "unit": "块",
+          "quantityText": "一块"
+        },
+        {
+          "name": "黑胡椒粒",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "盐",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "橄榄油",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        }
+      ],
+      "originalYield": "1块三文鱼的配方；人份未写",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": true,
+      "basisNote": "应用参考配方，非原方换算：应用按生三文鱼可食部120g和植物油3g记1参考份，盐与黑胡椒也给出示例克数。原书仅写三文鱼1块及调料适量，没有鱼块重量和人份；原书橄榄油改用通用植物油条目。",
+      "safetyNote": "肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。"
+    },
+    {
+      "id": "pork-egg-steamed",
+      "name": "肉饼蒸蛋",
       "category": "protein",
       "ingredients": [
         {
           "foodId": "pork",
+          "g": 200
+        },
+        {
+          "foodId": "egg",
           "g": 100
         },
         {
-          "foodId": "carrot",
-          "g": 50
-        },
-        {
-          "foodId": "woodEar",
-          "g": 30
-        },
-        {
-          "foodId": "redpepper",
-          "g": 40
-        },
-        {
-          "foodId": "oil",
-          "g": 6
+          "foodId": "water",
+          "g": 80
         },
         {
           "foodId": "soySauce",
           "g": 8
         },
         {
-          "foodId": "vinegar",
-          "g": 6
-        },
-        {
-          "foodId": "sugar",
-          "g": 4
+          "foodId": "oil",
+          "g": 3
         }
       ],
-      "portions": 1,
+      "portions": 2,
       "cookedG": null,
-      "activeMin": 15,
-      "totalMin": 20,
+      "activeMin": 12,
+      "totalMin": 30,
       "steps": [
-        "猪肉、胡萝卜和甜椒切丝，木耳按包装要求处理后沥水，生肉与蔬菜分开操作。",
-        "用本份油量先把肉丝炒熟，再加蔬菜和木耳充分炒熟。",
-        "加入实际称量的酱油、醋和糖拌匀；成品熟重、猪肉成分和调味营养待核对，不据菜名推算实际所吃份量。"
+        "猪肉剁碎，与配方水、酱油和油拌匀，铺成厚薄均匀的肉饼。",
+        "打散鸡蛋铺在肉饼上，放入已上汽的蒸锅加盖蒸。",
+        "根据肉饼厚度调整蒸制时间，确认肉末和蛋液中心均熟透后分成2份。"
       ],
       "prep": {
         "mode": "fresh"
       },
       "tags": [
-        "通用菜谱演示",
-        "混合菜粗记候选",
-        "多项营养未知",
-        "标准份示例"
+        "家常会做",
+        "固定配比",
+        "一锅蒸",
+        "应用参考配方",
+        "熟重待实测"
       ],
-      "estimated": true
+      "estimated": true,
+      "defaultEligible": true,
+      "fixedMix": true,
+      "sizingGroup": "protein",
+      "basisNote": "家常应用参考配方：这组原料做2参考份，保持肉与蛋的配比，不作为个人推荐摄入量；蒸制时间需按自家容器厚度调整。",
+      "safetyNote": "肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。",
+      "sourceIds": [
+        "cfsCookThoroughly"
+      ]
+    },
+    {
+      "id": "celery-squid",
+      "name": "芹菜炒鱿鱼",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "squidRaw",
+          "g": 200
+        },
+        {
+          "foodId": "celery",
+          "g": 240
+        },
+        {
+          "foodId": "oil",
+          "g": 8
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 6
+        },
+        {
+          "foodId": "salt",
+          "g": 1
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 15,
+      "totalMin": 20,
+      "steps": [
+        "鱿鱼处理干净、切成方便入口的小块，芹菜洗净切段，生海鲜与蔬菜分开处理。",
+        "锅中放植物油炒香蒜末，先将鱿鱼充分加热，再放入芹菜炒熟并调味。",
+        "检查鱿鱼内部熟透后分装；本菜只作为手动选择的家常候选。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "家常候选",
+        "尿酸关注",
+        "仅手动选择",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "defaultEligible": false,
+      "basisNote": "家常应用参考配方，共2参考份；克数仅用于配方计算，不是对某位家庭成员的食用建议。",
+      "uricAcidNote": "指南将鱿鱼列不宜，本人不默认安排，家人按各自情况选择。",
+      "safetyNote": "指南将鱿鱼列不宜，本人不默认安排，家人按各自情况选择。肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。",
+      "sourceIds": [
+        "nhcUricAcid2024",
+        "cfsCookThoroughly"
+      ]
+    },
+    {
+      "id": "tomato-beef-stew",
+      "name": "番茄慢炖牛腩",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "beefBrisketRaw",
+          "g": 250
+        },
+        {
+          "foodId": "onion",
+          "g": 100
+        },
+        {
+          "foodId": "tomato",
+          "g": 150
+        },
+        {
+          "foodId": "tomatoPaste",
+          "g": 50
+        },
+        {
+          "foodId": "oil",
+          "g": 10
+        },
+        {
+          "foodId": "water",
+          "g": 350
+        },
+        {
+          "foodId": "salt",
+          "g": 1
+        },
+        {
+          "foodId": "blackPepper",
+          "g": 0.5
+        },
+        {
+          "foodId": "basilDried",
+          "g": 0.5
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 20,
+      "totalMin": 100,
+      "steps": [
+        "牛腩、洋葱和番茄切块，生肉与蔬菜分开处理。",
+        "用配方植物油把牛腩表面煎上色，暂时盛出。",
+        "原锅炒软洋葱，再炒番茄至出汁，放入牛腩、番茄膏和配方水。",
+        "加盖炖至牛肉熟透软烂；锅具和块大小不同，时间可长于参考时长，中途观察水量。",
+        "加盐、黑胡椒及罗勒调味，按应用参考分成2份。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "已确认替换",
+        "慢炖",
+        "默认候选",
+        "应用分餐假设",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        15,
+        16,
+        17
+      ],
+      "originalIngredients": [
+        {
+          "name": "牛腩",
+          "amount": 250,
+          "unit": "g",
+          "quantityText": "250 g"
+        },
+        {
+          "name": "洋葱",
+          "amount": 100,
+          "unit": "g",
+          "quantityText": "100 g"
+        },
+        {
+          "name": "番茄",
+          "amount": 150,
+          "unit": "g",
+          "quantityText": "150 g"
+        },
+        {
+          "name": "番茄膏",
+          "amount": 50,
+          "unit": "g",
+          "quantityText": "50 g"
+        },
+        {
+          "name": "黑胡椒粒",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "盐",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "罗勒碎",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "橄榄油",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "水",
+          "amount": null,
+          "unit": "没过牛肉",
+          "quantityText": "加水没过牛肉",
+          "qualifier": "步骤中出现，非食材表列项"
+        }
+      ],
+      "originalYield": "食材表人份未写；照片另为500g牛肉的2至3人份",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": true,
+      "basisNote": "应用参考配方，非原书人份：保留食材表牛腩250g、洋葱100g、番茄150g、番茄膏50g，按应用假设分成2份（每份牛腩原料125g）。植物油、水及调味克数为应用参考，非原方换算。原书照片另用500g牛肉并标2—3人份，不能套到250g配方。牛腩单独建原料，未套用瘦牛肉成分。",
+      "safetyNote": "肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。"
+    },
+    {
+      "id": "lean-beef-salad",
+      "name": "瘦牛肉沙拉",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "beef",
+          "g": 160
+        },
+        {
+          "foodId": "lettuceRaw",
+          "g": 120
+        },
+        {
+          "foodId": "oil",
+          "g": 5
+        },
+        {
+          "foodId": "vinegar",
+          "g": 5
+        },
+        {
+          "foodId": "salt",
+          "g": 0.5
+        },
+        {
+          "foodId": "blackPepper",
+          "g": 0.2
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 20,
+      "totalMin": 30,
+      "steps": [
+        "生菜洗净、沥干；生肉与即食蔬菜使用不同的砧板和容器。",
+        "牛肉用配方盐与黑胡椒调味，静置约10分钟。",
+        "用配方植物油把牛肉煎至中心熟透，切成方便入口的片。",
+        "生菜装盘放上牛肉，用配方醋和余下油汁轻拌，及时食用。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "书页详细配方",
+        "仅手动选择",
+        "熟透做法",
+        "应用参考配方",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        6,
+        7,
+        8
+      ],
+      "originalIngredients": [
+        {
+          "name": "蔬菜包",
+          "amount": 120,
+          "unit": "g",
+          "quantityText": "120 g"
+        },
+        {
+          "name": "菲力牛排",
+          "amount": 160,
+          "unit": "g",
+          "quantityText": "160 g",
+          "qualifier": "厚切"
+        },
+        {
+          "name": "黑胡椒粒",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "盐",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "橄榄油",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "油醋汁",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        }
+      ],
+      "originalYield": "原书未明确标注人份",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": false,
+      "basisNote": "应用参考配方，非原方人份：原书蔬菜包120g、厚切菲力牛排160g，未明确人份。应用改用生菜120g与瘦牛肉通用条目160g，并假设整组为1参考份；植物油、醋、盐和胡椒均为应用克数，不是原书油醋汁的配比换算。原料部位及品牌成分仍待核对。",
+      "safetyNote": "肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。"
+    },
+    {
+      "id": "tomato-pomfret",
+      "name": "茄汁鲳鱼",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "pomfretRaw",
+          "g": 200
+        },
+        {
+          "foodId": "tomato",
+          "g": 300
+        },
+        {
+          "foodId": "garlicRaw",
+          "g": 6
+        },
+        {
+          "foodId": "gingerRaw",
+          "g": 5
+        },
+        {
+          "foodId": "scallionRaw",
+          "g": 5
+        },
+        {
+          "foodId": "oil",
+          "g": 6
+        },
+        {
+          "foodId": "salt",
+          "g": 1
+        },
+        {
+          "foodId": "water",
+          "g": 300
+        }
+      ],
+      "portions": 2,
+      "cookedG": null,
+      "activeMin": 20,
+      "totalMin": 40,
+      "steps": [
+        "应用配方按去骨鲳鱼肉称量；用葱姜调味，处理时检查残余鱼刺。",
+        "番茄去皮切丁，蒜切好；少量油把鱼两面煎至表面定型，暂时取出。",
+        "原锅炒软番茄并加入蒜，再放回鱼，加入配方水焖煮。",
+        "确认鱼肉内部熟透后加盐调味，分成2份；给孩子食用前再检查鱼刺。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "书页详细配方",
+        "仅手动选择",
+        "应用参考配方",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        9,
+        10,
+        11
+      ],
+      "originalIngredients": [
+        {
+          "name": "鲳鱼",
+          "amount": 1,
+          "unit": "条",
+          "quantityText": "1 条"
+        },
+        {
+          "name": "番茄",
+          "amount": 3,
+          "unit": "个",
+          "quantityText": "3 个"
+        },
+        {
+          "name": "蒜",
+          "amount": 0.5,
+          "unit": "个",
+          "quantityText": "半个"
+        },
+        {
+          "name": "水",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "姜",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "油",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        },
+        {
+          "name": "盐",
+          "amount": null,
+          "unit": "适量",
+          "quantityText": "适量"
+        }
+      ],
+      "originalYield": "1条鱼的配方；人份未写",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": false,
+      "basisNote": "应用参考配方，非原方换算：按去骨生鲳鱼肉200g、番茄300g等量化原料做2参考份。原书是鲳鱼1条、番茄3个、蒜半个，均无重量，不能视作上述克数；蒜原单位含义不明。配方水、油、姜葱及盐均为应用参考。",
+      "safetyNote": "肉、鱼、蛋与海鲜均需熟透；参考食安中心的彻底煮熟说明，烹调时间须随食材大小及器具调整。"
+    },
+    {
+      "id": "seed-berry-yogurt",
+      "name": "混合种子莓果酸奶杯",
+      "category": "breakfast",
+      "ingredients": [
+        {
+          "foodId": "greekYogurtPlain",
+          "g": 200
+        },
+        {
+          "foodId": "berries",
+          "g": 80
+        },
+        {
+          "foodId": "readyMixedSeeds",
+          "g": 10
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 5,
+      "totalMin": 5,
+      "steps": [
+        "选原味希腊酸奶，以及包装注明可直接食用的混合种子；需加热的籽类先按包装处理。",
+        "鲜莓果洗净沥干；冷冻莓果依包装要求充分处理，不能默认解冻即食。",
+        "酸奶入碗，加入称好的莓果和种子，及时食用。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "书页详细配方",
+        "仅手动选择",
+        "应用参考配方",
+        "成分待核对"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        18,
+        19,
+        20
+      ],
+      "originalIngredients": [
+        {
+          "name": "希腊酸奶",
+          "amount": 200,
+          "unit": "g",
+          "quantityText": "200 g",
+          "qualifier": "步骤写原味"
+        },
+        {
+          "name": "混合种子",
+          "amount": 1,
+          "unit": "包",
+          "quantityText": "1 包"
+        },
+        {
+          "name": "蓝莓",
+          "amount": null,
+          "unit": "颗",
+          "quantityText": "8～10 颗",
+          "amountRange": [
+            8,
+            10
+          ]
+        },
+        {
+          "name": "树莓",
+          "amount": null,
+          "unit": "颗",
+          "quantityText": "8～10 颗",
+          "amountRange": [
+            8,
+            10
+          ]
+        }
+      ],
+      "originalYield": "1人份",
+      "sourceIds": [
+        "userBook20261030"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": false,
+      "basisNote": "原书明确为1人份。应用参考配方，非原方换算：保留希腊酸奶200g；应用将莓果定为总重80g、即食混合种子定为10g。原书蓝莓与树莓各8—10颗、种子1包，无相应重量，不能据此换算。应用不加可选蜂蜜；希腊酸奶与混合种子成分未知，不套用普通酸奶或坚果值。"
+    },
+    {
+      "id": "beetroot-pound-cake",
+      "name": "甜菜根磅蛋糕",
+      "category": "snack",
+      "ingredients": [
+        {
+          "foodId": "butter",
+          "g": 70
+        },
+        {
+          "foodId": "sugar",
+          "g": 70
+        },
+        {
+          "foodId": "egg",
+          "g": 70
+        },
+        {
+          "foodId": "wheatFlour",
+          "g": 60
+        },
+        {
+          "foodId": "almondFlour",
+          "g": 45
+        },
+        {
+          "foodId": "honey",
+          "g": 13
+        },
+        {
+          "foodId": "bakingPowder",
+          "g": 2
+        },
+        {
+          "foodId": "cream",
+          "g": 40
+        },
+        {
+          "foodId": "beetrootPowder",
+          "g": 6
+        }
+      ],
+      "portions": 16,
+      "cookedG": null,
+      "activeMin": 15,
+      "totalMin": 60,
+      "steps": [
+        "面粉、杏仁粉、泡打粉和甜菜根粉混匀后过筛。",
+        "黄油融化，与细砂糖、蛋液、蜂蜜和奶油拌匀，再拌入干料。",
+        "把面糊分装进两个130×50×50mm小模具，留出膨胀空间。",
+        "原方参考170℃烤15分钟，再降至150℃烤约15分钟；结合烤箱检查内部熟成。",
+        "冷却后，每个蛋糕按应用假设切成8小片，共16小片；记录实际成品重量，按食用小片数选择。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "烘焙总配方",
+        "固定配比",
+        "16小片为应用假设",
+        "仅手动选择",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        21,
+        22,
+        23
+      ],
+      "originalIngredients": [
+        {
+          "name": "黄油",
+          "amount": 70,
+          "unit": "g",
+          "quantityText": "70 g"
+        },
+        {
+          "name": "细砂糖",
+          "amount": 70,
+          "unit": "g",
+          "quantityText": "70 g"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": 70,
+          "unit": "g",
+          "quantityText": "70 g（一个半鸡蛋）"
+        },
+        {
+          "name": "面粉",
+          "amount": 60,
+          "unit": "g",
+          "quantityText": "60 g"
+        },
+        {
+          "name": "杏仁粉",
+          "amount": 45,
+          "unit": "g",
+          "quantityText": "45 g"
+        },
+        {
+          "name": "蜂蜜",
+          "amount": 13,
+          "unit": "g",
+          "quantityText": "13 g"
+        },
+        {
+          "name": "泡打粉",
+          "amount": 2,
+          "unit": "g",
+          "quantityText": "2 g"
+        },
+        {
+          "name": "奶油",
+          "amount": 40,
+          "unit": "g",
+          "quantityText": "40 g"
+        },
+        {
+          "name": "甜菜根粉",
+          "amount": 6,
+          "unit": "g",
+          "quantityText": "6 g"
+        }
+      ],
+      "originalYield": "2个小磅蛋糕的总配方",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "grain",
+      "portionLabel": "小片",
+      "batchLabel": "2个小磅蛋糕，共16小片（应用切片假设）",
+      "basisNote": "原书是2个130×50×50mm小磅蛋糕的总配方，不是1人份。应用保留全部原料克数，假设每个切8小片、总计16小片，因此portions=16；原书没有切片数，实际每片熟重需称量。鸡蛋以70g计，原书旁注约一个半鸡蛋。此甜点不默认加入日常安排。",
+      "safetyNote": "鸡蛋面糊需烤熟；冷却及保存按实际环境和食品安全要求处理，不沿用保存条件未说明的过夜指令。"
+    },
+    {
+      "id": "cranberry-chia-bagel",
+      "name": "蔓越莓奇亚籽贝果",
+      "category": "grain",
+      "ingredients": [
+        {
+          "foodId": "wheatFlour",
+          "g": 360
+        },
+        {
+          "foodId": "wholeWheatFlour",
+          "g": 40
+        },
+        {
+          "foodId": "salt",
+          "g": 6
+        },
+        {
+          "foodId": "water",
+          "g": 200
+        },
+        {
+          "foodId": "honey",
+          "g": 12
+        },
+        {
+          "foodId": "levain",
+          "g": 80
+        },
+        {
+          "foodId": "yeastPowder",
+          "g": 1.5
+        },
+        {
+          "foodId": "chia",
+          "g": 20
+        },
+        {
+          "foodId": "driedCranberries",
+          "g": 20
+        }
+      ],
+      "portions": 8,
+      "cookedG": null,
+      "activeMin": 30,
+      "totalMin": 150,
+      "steps": [
+        "应用先从配方水中取60g泡润奇亚籽，其余140g留作揉面；这是应用参考处理，原书没有说明泡籽水与面团水的关系。",
+        "将面粉、全麦粉、盐、面团用水、蜂蜜、预先备好的鲁邦种和酵母粉揉成团，拌入泡好的奇亚籽与蔓越莓干。",
+        "盖住面团，参考在约25℃静置25分钟，分成8份，搓长并接成圈。",
+        "整形后继续发酵约40—50分钟，结合面团实际状态检查。",
+        "用另备的微沸蜂蜜水将贝果两面各煮约1分钟，沥水后放入烤箱。",
+        "参考170℃烤约15分钟，结合自家烤箱确认熟成后冷却；记录实际单个重量。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "烘焙总配方",
+        "固定配比",
+        "原方8个",
+        "仅手动选择",
+        "水量待试做"
+      ],
+      "estimated": true,
+      "sourcePages": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "originalIngredients": [
+        {
+          "name": "面粉",
+          "amount": 360,
+          "unit": "g",
+          "quantityText": "360 g"
+        },
+        {
+          "name": "全麦粉",
+          "amount": 40,
+          "unit": "g",
+          "quantityText": "40 g"
+        },
+        {
+          "name": "盐",
+          "amount": 6,
+          "unit": "g",
+          "quantityText": "6 g"
+        },
+        {
+          "name": "水",
+          "amount": 200,
+          "unit": "g",
+          "quantityText": "200 g（面团）"
+        },
+        {
+          "name": "蜂蜜",
+          "amount": 12,
+          "unit": "g",
+          "quantityText": "12 g"
+        },
+        {
+          "name": "鲁邦种",
+          "amount": 80,
+          "unit": "g",
+          "quantityText": "80 g"
+        },
+        {
+          "name": "酵母粉",
+          "amount": 1.5,
+          "unit": "g",
+          "quantityText": "1.5 g"
+        },
+        {
+          "name": "奇亚籽",
+          "amount": 20,
+          "unit": "g",
+          "quantityText": "20 g"
+        },
+        {
+          "name": "蔓越莓",
+          "amount": 20,
+          "unit": "g",
+          "quantityText": "20 g"
+        }
+      ],
+      "originalYield": "8个贝果的总配方",
+      "sourceIds": [
+        "userBook20261030",
+        "cfsCookThoroughly"
+      ],
+      "hasDetailedRecipe": true,
+      "defaultEligible": false,
+      "fixedMix": true,
+      "sizingGroup": "grain",
+      "portionLabel": "个",
+      "batchLabel": "8个贝果",
+      "basisNote": "原书明确为8个贝果的总配方，1份在应用中指1个，不等于1人餐量。应用保留表中各项克数；但将200g水作为泡籽和揉面的合计参考水量，并选蔓越莓干，均不是原方换算。原书另加泡籽水量、煮制蜂蜜水比例及鲁邦种含水率未写；需试做核实，未默认安排。不含鲁邦种培养时间。",
+      "originalProcessIngredients": [
+        {
+          "name": "泡奇亚籽用水",
+          "quantityText": "用水泡约5分钟",
+          "qualifier": "原书没有说明是否包含在面团水200g内"
+        },
+        {
+          "name": "煮贝果用蜂蜜水",
+          "quantityText": "微沸蜂蜜水",
+          "qualifier": "蜂蜜及水的另行用量未标；不能默认来自面团蜂蜜12g"
+        }
+      ],
+      "processIngredients": [
+        {
+          "foodId": "water",
+          "g": 1000,
+          "note": "另备用于煮制的应用参考水，不计作全部吃下的原料"
+        },
+        {
+          "foodId": "honey",
+          "g": 20,
+          "note": "另备煮制蜂蜜水的应用示例；实际吸收量未知，不计作全部吃下"
+        }
+      ],
+      "processIngredientNote": "煮制用水和蜂蜜为处理介质，单列于processIngredients；吸收量未知，配方营养未计其残留，不能当作已精确校准。",
+      "safetyNote": "贝果需烤至内部熟成；原书参数为参考，鲁邦种状态和水量仍待试做核实。"
     }
   ],
   "prepPacks": [
@@ -2491,8 +3734,7 @@ window.MealData = {
       "portionNote": "秋葵按180g生可食部一份；西兰花按150—200g生可食部分袋。两者分别标注，不混为同一种营养。",
       "useFor": [
         "蒜香秋葵",
-        "蒜香西兰花",
-        "西兰花豆腐煮"
+        "蒜蓉西兰花"
       ]
     },
     {
@@ -2515,8 +3757,7 @@ window.MealData = {
       "freezeType": "raw-frozen",
       "portionNote": "单个标准份以100g生可食鸡肉为示例；多人用量按所选份数合计，不固定套给所有年龄。",
       "useFor": [
-        "彩椒洋葱鸡丁",
-        "芹菜炒鸡丝"
+        "彩椒洋葱鸡丁"
       ]
     },
     {
@@ -2610,6 +3851,24 @@ window.MealData = {
       "label": "广州农业农村局：当地水果采购候选",
       "url": "https://nyncj.gz.gov.cn/fw/sjfb/gzscxq/content/post_11067684.html",
       "note": "水果品种与到货随市场变化，不据此承诺整季供货。"
+    },
+    {
+      "id": "userBook20261030",
+      "label": "用户提供书页：菜单与7份详细菜谱事实",
+      "url": "",
+      "note": "用户于2026-10-30提供20张书页照片，仅保留菜名、食材原量、页码及独立简述；照片、附件路径和长原文不公开。书名、作者、ISBN待补充；没有采用书中医学评分或疗效结论。"
+    },
+    {
+      "id": "nhcUricAcid2024",
+      "label": "国家卫生健康委：成人高尿酸血症与痛风食养指南（2024年版）",
+      "url": "https://www.nhc.gov.cn/sps/c100088/202402/9ba512ba8e314a47a181db11d2fa188d/files/1743476135548_41457.pdf",
+      "note": "指南将鱿鱼列不宜，本人不默认安排，家人按各自情况选择。此处仅作候选提醒，不据此生成个人食用克数。"
+    },
+    {
+      "id": "cfsCookThoroughly",
+      "label": "香港食物安全中心：食物安全五要点—彻底煮熟",
+      "url": "https://www.cfs.gov.hk/sc_chi/consumer_zone/safefood_all/five_keys_apply_cook.html",
+      "note": "肉、鱼、蛋与海鲜需彻底煮熟；原书牛排和三文鱼的未全熟做法已改为熟透。时间受厚度、份量和器具影响。"
     }
   ],
   "seasonal": {
@@ -2637,5 +3896,1705 @@ window.MealData = {
       ],
       "note": "广州秋冬采购候选，以当地市场为准；与上海分别安排。菜心、芥蓝、油麦菜等仅录采购候选，尚未匹配的营养值为未知，不按零计。"
     }
+  },
+  "retiredRecipes": [
+    {
+      "id": "salmon",
+      "name": "柠檬烤三文鱼",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "salmon",
+          "g": 100
+        },
+        {
+          "foodId": "oil",
+          "g": 2
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 5,
+      "totalMin": 25,
+      "steps": [
+        "鱼肉用柠檬、黑胡椒调味。",
+        "烤至中心熟透，另配主食和蔬菜。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "烤箱省心",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "chicken",
+      "name": "芹菜炒鸡丝",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "chicken",
+          "g": 100
+        },
+        {
+          "foodId": "celery",
+          "g": 100
+        },
+        {
+          "foodId": "oil",
+          "g": 5
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 15,
+      "totalMin": 15,
+      "steps": [
+        "鸡肉切丝，芹菜切短段，生肉与蔬菜分开处理。",
+        "用本份油量将鸡肉炒至熟透，再加入芹菜炒熟。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "家常做法",
+        "菜肉同锅",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "eggmush",
+      "name": "菌菇蒸蛋",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "egg",
+          "g": 50
+        },
+        {
+          "foodId": "mushroom",
+          "g": 70
+        },
+        {
+          "foodId": "oil",
+          "g": 2
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 7,
+      "totalMin": 20,
+      "steps": [
+        "菌菇充分煮熟，蛋液加水后与菌菇拌匀。",
+        "蒸至蛋液完全凝固；实际成品重包含加入的水。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "软烂好入口",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "beef",
+      "name": "萝卜炖瘦牛肉",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "beef",
+          "g": 90
+        },
+        {
+          "foodId": "radish",
+          "g": 150
+        },
+        {
+          "foodId": "oil",
+          "g": 3
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 15,
+      "totalMin": 75,
+      "steps": [
+        "牛肉切小块，焯后炖至软。",
+        "加入萝卜炖透；标为被动烹饪较久。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "周末备餐",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "broccolitofu",
+      "name": "西兰花豆腐煮",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "broccoliRaw",
+          "g": 150
+        },
+        {
+          "foodId": "tofuCalciumRaw",
+          "g": 150
+        },
+        {
+          "foodId": "oil",
+          "g": 3
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 8,
+      "totalMin": 15,
+      "steps": [
+        "豆腐切块，西兰花用鲜品或按餐分装的焯水冷冻原料。",
+        "加少量水煮至熟透，按本份油量调味；此菜钠钙及部分宏量数据未知。"
+      ],
+      "prep": {
+        "mode": "blanched-frozen"
+      },
+      "tags": [
+        "冷冻组件",
+        "仅已知营养字段计入",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "yuxiang",
+      "name": "鱼香肉丝",
+      "category": "protein",
+      "ingredients": [
+        {
+          "foodId": "pork",
+          "g": 100
+        },
+        {
+          "foodId": "carrot",
+          "g": 50
+        },
+        {
+          "foodId": "woodEar",
+          "g": 30
+        },
+        {
+          "foodId": "redpepper",
+          "g": 40
+        },
+        {
+          "foodId": "oil",
+          "g": 6
+        },
+        {
+          "foodId": "soySauce",
+          "g": 8
+        },
+        {
+          "foodId": "vinegar",
+          "g": 6
+        },
+        {
+          "foodId": "sugar",
+          "g": 4
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 15,
+      "totalMin": 20,
+      "steps": [
+        "猪肉、胡萝卜和甜椒切丝，木耳按包装要求处理后沥水，生肉与蔬菜分开操作。",
+        "用本份油量先把肉丝炒熟，再加蔬菜和木耳充分炒熟。",
+        "加入实际称量的酱油、醋和糖拌匀；成品熟重、猪肉成分和调味营养待核对，不据菜名推算实际所吃份量。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "通用菜谱演示",
+        "混合菜粗记候选",
+        "多项营养未知",
+        "标准份示例"
+      ],
+      "estimated": true,
+      "retired": true
+    },
+    {
+      "id": "broccoli",
+      "name": "蒜香西兰花",
+      "category": "veg",
+      "ingredients": [
+        {
+          "foodId": "broccoli",
+          "g": 200
+        },
+        {
+          "foodId": "oil",
+          "g": 4
+        }
+      ],
+      "portions": 1,
+      "cookedG": null,
+      "activeMin": 10,
+      "totalMin": 10,
+      "steps": [
+        "西兰花切小朵清洗。",
+        "焯熟后少油翻炒。"
+      ],
+      "prep": {
+        "mode": "fresh"
+      },
+      "tags": [
+        "秋冬",
+        "标准份示例",
+        "熟重待实测"
+      ],
+      "estimated": true,
+      "retired": true
+    }
+  ],
+  "recipeReplacements": {
+    "yuxiang": null,
+    "salmon": "salmon-pan",
+    "chicken": null,
+    "eggmush": "pork-egg-steamed",
+    "beef": "tomato-beef-stew",
+    "broccolitofu": "broccoli-garlic",
+    "broccoli": "broccoli-garlic"
+  },
+  "catalogVersion": 2,
+  "bookReferences": [
+    {
+      "id": "book-ref-001",
+      "name": "水煮蛋",
+      "category": "breakfast",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-002",
+      "name": "杂粮饭",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单食材提示：甜荞麦米、燕麦米、薏苡仁、黑米；没有克数及完整做法，名称已规范。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-003",
+      "name": "清炒油麦菜",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-004",
+      "name": "清蒸龙利鱼",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-005",
+      "name": "蒜蓉西兰花",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": "broccoli-garlic"
+    },
+    {
+      "id": "book-ref-006",
+      "name": "蒸山药",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-007",
+      "name": "瘦牛肉沙拉",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        34
+      ],
+      "hasDetailedRecipe": true,
+      "notes": "本次另有详细食谱照片；菜名与详细照片对应，份量和步骤以详细照片转录为准。",
+      "recipeId": "lean-beef-salad"
+    },
+    {
+      "id": "book-ref-008",
+      "name": "清蒸菠菜",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-009",
+      "name": "海带蛤蜊汤",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-010",
+      "name": "无糖酸奶水果杯",
+      "category": "breakfast",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 页30提示无糖酸奶、黑莓、蓝莓、树莓、奇亚籽、核桃，无克数。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-011",
+      "name": "番茄炒蛋",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-012",
+      "name": "清炒芦笋",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-013",
+      "name": "金枪鱼蔬菜汤",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-014",
+      "name": "苦菊沙拉",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-015",
+      "name": "天然酵母贝果",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 页30注明原味，页38未说明口味；未与有详细做法的蔓越莓奇亚籽贝果合并。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-016",
+      "name": "无糖豆浆",
+      "category": "breakfast",
+      "sourcePages": [
+        30,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-017",
+      "name": "钢切燕麦",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        32,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-018",
+      "name": "炒红菜头",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-019",
+      "name": "清蒸虾仁",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-020",
+      "name": "炒蘑菇菠菜",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-021",
+      "name": "魔芋面",
+      "category": "grain",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-022",
+      "name": "番茄牛肉丸汤",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-023",
+      "name": "烤老南瓜",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-024",
+      "name": "水波蛋",
+      "category": "breakfast",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-025",
+      "name": "彩椒",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        34,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-026",
+      "name": "香菇鸡肉牛肉丁（1:1）",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-027",
+      "name": "拌海带丝",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-028",
+      "name": "凉拌番茄",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-029",
+      "name": "清蒸银鳕鱼",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-030",
+      "name": "无糖酸奶杯",
+      "category": "breakfast",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 菜单存在不同水果/坚果版本：页30蓝莓、树莓、黑莓、核桃；页32可加奇亚籽及蓝莓/树莓/黑莓；页34有黑莓+核桃+奇亚籽、蓝莓+核桃+亚麻籽粉两版；页36未列配料；页38有蓝莓+核桃、混合莓果+核桃版本。未拆成虚构独立配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-031",
+      "name": "清蒸鲈鱼",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-032",
+      "name": "番茄蛋花汤",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-033",
+      "name": "凉拌苦菊",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-034",
+      "name": "蒸紫薯",
+      "category": "grain",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-035",
+      "name": "黑麦三明治",
+      "category": "breakfast",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 页30括号提示瘦牛肉、生菜、番茄。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-036",
+      "name": "藜麦牛肉粒",
+      "category": "protein",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-037",
+      "name": "清炒西兰花",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-038",
+      "name": "紫甘蓝沙拉",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-039",
+      "name": "拌菠菜（熟）",
+      "category": "veg",
+      "sourcePages": [
+        30
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-040",
+      "name": "香煎三文鱼",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        32,
+        38
+      ],
+      "hasDetailedRecipe": true,
+      "notes": "本次另有详细食谱照片；菜名与详细照片对应，份量和步骤以详细照片转录为准。 页32同类菜单写“煎三文鱼”，作为名称简写合并；清蒸三文鱼保留独立条目。",
+      "recipeId": "salmon-pan"
+    },
+    {
+      "id": "book-ref-041",
+      "name": "凉拌豆苗",
+      "category": "veg",
+      "sourcePages": [
+        30,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-042",
+      "name": "鳕鱼海带汤",
+      "category": "protein",
+      "sourcePages": [
+        30,
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-043",
+      "name": "牛油果水波蛋贝果",
+      "category": "breakfast",
+      "sourcePages": [
+        32,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-044",
+      "name": "番茄",
+      "category": "veg",
+      "sourcePages": [
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-045",
+      "name": "三文鱼藜麦饭",
+      "category": "grain",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-046",
+      "name": "牛肉海带苗火锅",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-047",
+      "name": "蒸老南瓜",
+      "category": "grain",
+      "sourcePages": [
+        32,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-048",
+      "name": "低温煮瘦牛肉",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-049",
+      "name": "芦笋炒菇",
+      "category": "veg",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-050",
+      "name": "炖番茄牛腩菜",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 保留菜单原文；与另有详细照片的番茄慢炖牛腩名称接近，尚未确认同一配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-051",
+      "name": "鹰嘴豆蔬菜蛋饼",
+      "category": "breakfast",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 页32括号提示鸡蛋、鹰嘴豆泥、胡萝卜丝、菠菜。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-052",
+      "name": "煎青花鱼（待确认）",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "名称识别或组合拆分待确认；只保留菜单候选，不提供猜测份量与做法，不参与自动安排。",
+      "recipeId": null,
+      "status": "pending-confirmation",
+      "requiresConfirmation": true
+    },
+    {
+      "id": "book-ref-053",
+      "name": "虾仁西葫芦蒸碗",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-054",
+      "name": "豆浆",
+      "category": "breakfast",
+      "sourcePages": [
+        32,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-055",
+      "name": "黄瓜",
+      "category": "veg",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-056",
+      "name": "混合种子莓果酸奶杯",
+      "category": "breakfast",
+      "sourcePages": [
+        32,
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": true,
+      "notes": "本次另有详细食谱照片；菜名与详细照片对应，份量和步骤以详细照片转录为准。 仅与同名详细食谱关联；各页其它无糖酸奶杯不能一概当成这份完整食谱。",
+      "recipeId": "seed-berry-yogurt"
+    },
+    {
+      "id": "book-ref-057",
+      "name": "牛排沙拉碗",
+      "category": "protein",
+      "sourcePages": [
+        32,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-058",
+      "name": "藜麦",
+      "category": "grain",
+      "sourcePages": [
+        32,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-059",
+      "name": "金针菇鸡蛋汤",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-060",
+      "name": "烤紫薯",
+      "category": "grain",
+      "sourcePages": [
+        32,
+        34,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-061",
+      "name": "煎鲈鱼",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-062",
+      "name": "核桃",
+      "category": "snack",
+      "sourcePages": [
+        32,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-063",
+      "name": "番茄鸡肉汤",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-064",
+      "name": "瘦牛肉",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-065",
+      "name": "藜麦饭",
+      "category": "grain",
+      "sourcePages": [
+        32,
+        34,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名，没有完整配方；名称已规范。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-066",
+      "name": "凉拌菠菜",
+      "category": "veg",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-067",
+      "name": "鲑鱼炖番茄（待确认）",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "名称识别或组合拆分待确认；只保留菜单候选，不提供猜测份量与做法，不参与自动安排。",
+      "recipeId": null,
+      "status": "pending-confirmation",
+      "requiresConfirmation": true
+    },
+    {
+      "id": "book-ref-068",
+      "name": "海带苗银鳕鱼汤",
+      "category": "protein",
+      "sourcePages": [
+        32
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-069",
+      "name": "全麦番茄鸡蛋面",
+      "category": "grain",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-070",
+      "name": "银鳕鱼",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-071",
+      "name": "煎银鳕鱼",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-072",
+      "name": "黑麦高纤核桃面包",
+      "category": "grain",
+      "sourcePages": [
+        34,
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-073",
+      "name": "牛奶",
+      "category": "breakfast",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-074",
+      "name": "蒜香菠菜炒鸡蛋",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-075",
+      "name": "蘑菇炒虾仁",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-076",
+      "name": "番茄牛肉意面（全麦）",
+      "category": "grain",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-077",
+      "name": "烤西兰花",
+      "category": "veg",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-078",
+      "name": "全麦贝果",
+      "category": "grain",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-079",
+      "name": "清蒸三文鱼",
+      "category": "protein",
+      "sourcePages": [
+        34,
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-080",
+      "name": "金枪鱼沙拉",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-081",
+      "name": "鸡腿排",
+      "category": "protein",
+      "sourcePages": [
+        34,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-082",
+      "name": "炒牛肝菌",
+      "category": "veg",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-083",
+      "name": "香煎牛排",
+      "category": "protein",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-084",
+      "name": "烤芦笋",
+      "category": "veg",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-085",
+      "name": "虾仁蔬菜沙拉藜麦（待确认）",
+      "category": "grain",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "名称识别或组合拆分待确认；只保留菜单候选，不提供猜测份量与做法，不参与自动安排。",
+      "recipeId": null,
+      "status": "pending-confirmation",
+      "requiresConfirmation": true
+    },
+    {
+      "id": "book-ref-086",
+      "name": "海带汤",
+      "category": "veg",
+      "sourcePages": [
+        34
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-087",
+      "name": "虾皮拌菠菜",
+      "category": "veg",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-088",
+      "name": "三七叶鸡蛋汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-089",
+      "name": "鳕鱼炖蛋羹",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-090",
+      "name": "人参鸡汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-091",
+      "name": "魔芋丝拌苦菊",
+      "category": "veg",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-092",
+      "name": "天麻面蛋花汤（待确认）",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "名称识别或组合拆分待确认；只保留菜单候选，不提供猜测份量与做法，不参与自动安排。",
+      "recipeId": null,
+      "status": "pending-confirmation",
+      "requiresConfirmation": true
+    },
+    {
+      "id": "book-ref-093",
+      "name": "鹰嘴豆",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-094",
+      "name": "红枣",
+      "category": "snack",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-095",
+      "name": "清炖牛肉汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-096",
+      "name": "菠菜炒鸡蛋",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-097",
+      "name": "魔芋银鳕鱼汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-098",
+      "name": "蒸鸡蛋羹",
+      "category": "breakfast",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-099",
+      "name": "冬瓜虾仁汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-100",
+      "name": "蒸鸡肉丸",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-101",
+      "name": "清炒苦菊",
+      "category": "veg",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-102",
+      "name": "番茄鸡蛋汤",
+      "category": "protein",
+      "sourcePages": [
+        36,
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-103",
+      "name": "虾仁",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-104",
+      "name": "银鳕鱼三七叶汤",
+      "category": "protein",
+      "sourcePages": [
+        36
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-105",
+      "name": "海带鸡蛋汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-106",
+      "name": "炒菠菜",
+      "category": "veg",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-107",
+      "name": "番茄牛腩汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 与炖番茄牛腩菜、番茄慢炖牛腩分别保留，不擅自认定做法相同。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-108",
+      "name": "虾仁银鳕鱼蒸碗",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-109",
+      "name": "无糖黑豆浆",
+      "category": "breakfast",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-110",
+      "name": "香煎鸡胸肉",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-111",
+      "name": "冬瓜银鳕鱼汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-112",
+      "name": "烤红薯",
+      "category": "grain",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-113",
+      "name": "橄榄油汁",
+      "category": "veg",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 页38为牛排沙拉碗的调味搭配；是酱汁候选，非独立蔬菜菜肴。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-114",
+      "name": "虾仁鸡蛋汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-115",
+      "name": "海带银鳕鱼汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-116",
+      "name": "香蕉",
+      "category": "snack",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。 原菜单仅列食材/食物名，烹法或加工状态未说明。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-117",
+      "name": "清蒸鳕鱼",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    },
+    {
+      "id": "book-ref-118",
+      "name": "番茄银鳕鱼汤",
+      "category": "protein",
+      "sourcePages": [
+        38
+      ],
+      "hasDetailedRecipe": false,
+      "notes": "仅见菜单菜名；参考做法待确认，拟用家常参考配方。",
+      "recipeId": null
+    }
+  ],
+  "bookImportSummary": {
+    "photoCount": 20,
+    "menuItemCount": 118,
+    "detailedRecipeCount": 7,
+    "uncertainCount": 4,
+    "detailedRecipeIds": [
+      "salmon-pan",
+      "tomato-beef-stew",
+      "lean-beef-salad",
+      "tomato-pomfret",
+      "seed-berry-yogurt",
+      "beetroot-pound-cake",
+      "cranberry-chia-bagel"
+    ],
+    "sourceMenuPages": [
+      30,
+      32,
+      34,
+      36,
+      38
+    ],
+    "notes": "20张用户提供照片整理为118个菜单候选和7份详细食谱事实；书页照片不公开。菜单候选没有完整份量与做法，只有精确对应的名称关联已整理详细条目；4处名称或拆分待确认。没有移入书中医学评分或疗效结论。"
   }
 };
